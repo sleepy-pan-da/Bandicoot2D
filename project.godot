@@ -29,6 +29,10 @@ _global_script_class_icons={
 config/name="Bandicoot2D"
 config/icon="res://icon.png"
 
+[debug]
+
+gdscript/warnings/return_value_discarded=false
+
 [display]
 
 window/size/width=480

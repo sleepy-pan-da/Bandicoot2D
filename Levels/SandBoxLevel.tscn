@@ -9,4 +9,4 @@
 collision_mask = 0
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 56, 144 )
+position = Vector2( 40, 152 )
