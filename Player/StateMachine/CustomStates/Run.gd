@@ -41,9 +41,12 @@ func handle_input(_event: InputEvent) -> void:
 
 func physics_update(_delta: float) -> void:
 	update_horizontal_velocity(_delta)
+	velocity.y += player.GRAVITY
 	velocity = player.move_and_slide(velocity, player.FLOOR_NORMAL)
-	if velocity.x == 0:
+	if horizontal_direction == 0:
 		state_machine.transition_to("Idle", {"facing_left": facing_left})
+	if !player.is_on_floor():
+		state_machine.transition_to("Fall", {"velocity" : velocity, "horizontal_direction": horizontal_direction, "facing_left": facing_left})
 
 
 func update_horizontal_velocity(_delta: float) -> void:

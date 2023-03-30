@@ -201,4 +201,3 @@ tile_set = SubResource( 9 )
 cell_size = Vector2( 16, 16 )
 show_collision = true
 format = 1
-tile_data = PoolIntArray( 131079, 5, 0, 196613, 4, 0, 196615, 6, 0, 262146, 0, 0, 262147, 1, 0, 262148, 2, 0, 262151, 7, 0 )

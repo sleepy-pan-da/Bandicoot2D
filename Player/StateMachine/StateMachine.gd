@@ -45,7 +45,7 @@ func transition_to(target_state_name: String, msg: Dictionary = {}) -> void:
 
 	state.exit()
 	state = get_node(target_state_name)
-	# print("current state: " + state.name)
+	print("current state: " + state.name)
 	state.enter(msg)
 	textLabel.text = state.name
 	emit_signal("transitioned", state.name)

@@ -45,7 +45,7 @@ func physics_update(_delta: float) -> void:
 	velocity = player.move_and_slide(velocity, player.FLOOR_NORMAL)
 
 	if player.is_on_floor():
-		if velocity.x == 0: 
+		if horizontal_direction == 0:
 			state_machine.transition_to("Idle", {"facing_left": facing_left})
 		else:
 			state_machine.transition_to("Run", {"velocity" : velocity, "horizontal_direction": horizontal_direction, "facing_left": facing_left})

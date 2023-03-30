@@ -1,18 +1,30 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Tilemaps/StoneTerrainTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/ParallaxBackground/ParallaxBackground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Levels/Background/RegularBackground.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Tilemaps/GoldTerrainTileMap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Tilemaps/GrassTerrainTileMap.tscn" type="PackedScene" id=6]
 
 [node name="SandBoxLevel" type="Node2D"]
 
-[node name="StoneTerrainTileMap" parent="." instance=ExtResource( 1 )]
-show_collision = false
+[node name="Terrain" type="Node2D" parent="."]
+
+[node name="StoneTerrainTileMap" parent="Terrain" instance=ExtResource( 1 )]
 collision_mask = 0
+tile_data = PoolIntArray( 65538, 8, 0, 65539, 5, 0, 65540, 5, 0, 65541, 5, 0, 65542, 5, 0, 65543, 5, 0, 65544, 5, 0, 65545, 5, 0, 65546, 5, 0, 65547, 5, 0, 65548, 5, 0, 65549, 5, 0, 65550, 5, 0, 65551, 5, 0, 65552, 5, 0, 65553, 5, 0, 65554, 5, 0, 65555, 5, 0, 65556, 5, 0, 65557, 5, 0, 65558, 9, 0, 131074, 7, 0, 131094, 3, 0, 196610, 7, 0, 196630, 3, 0, 262146, 7, 0, 262166, 3, 0, 327682, 7, 0, 327702, 3, 0, 393218, 7, 0, 393238, 3, 0, 458754, 7, 0, 458774, 3, 0, 524290, 7, 0, 524310, 3, 0, 589826, 7, 0, 589846, 3, 0, 655362, 7, 0, 655382, 3, 0, 720898, 7, 0, 720918, 3, 0, 786434, 10, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 1, 0, 786452, 1, 0, 786453, 1, 0, 786454, 11, 0 )
+
+[node name="GoldTerrainTileMap" parent="Terrain" instance=ExtResource( 5 )]
+show_collision = true
+tile_data = PoolIntArray( 589840, 5, 0, 655373, 4, 0, 655376, 6, 0, 720906, 3, 0, 720912, 7, 0 )
+
+[node name="GrassTerrainTileMap" parent="Terrain" instance=ExtResource( 6 )]
+show_collision = true
+tile_data = PoolIntArray( 524306, 12, 0, 524307, 13, 0, 524308, 13, 0, 524309, 14, 0, 589842, 15, 0, 589843, 16, 0, 589844, 16, 0, 589845, 17, 0, 655378, 15, 0, 655379, 16, 0, 655380, 16, 0, 655381, 17, 0, 720914, 18, 0, 720915, 19, 0, 720916, 19, 0, 720917, 20, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 40, 152 )
+position = Vector2( 104, 56 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
 
@@ -20,8 +32,21 @@ position = Vector2( 40, 152 )
 layer = -2
 
 [node name="RegularBackground" parent="Background" instance=ExtResource( 4 )]
+margin_left = 368.0
+margin_bottom = 7.0
 
 [node name="RegularBackground2" parent="Background" instance=ExtResource( 4 )]
 margin_left = 0.0
-margin_top = 176.0
-margin_right = -80.0
+margin_right = -368.0
+margin_bottom = 7.0
+
+[node name="RegularBackground3" parent="Background" instance=ExtResource( 4 )]
+margin_left = 32.0
+margin_right = -32.0
+margin_bottom = -209.0
+
+[node name="RegularBackground4" parent="Background" instance=ExtResource( 4 )]
+margin_left = 32.0
+margin_top = 208.0
+margin_right = -32.0
+margin_bottom = 7.0
