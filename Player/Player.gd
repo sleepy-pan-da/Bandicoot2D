@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 const ACCELERATION = 1200
 const MAXSPEED = 100
+const MAXSPEED_AIR = 150
 const FRICTION = 1000
 const FLOOR_NORMAL = Vector2(0, -1)
 const JUMP_POWER = -250
