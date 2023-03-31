@@ -16,9 +16,9 @@ func enter(_msg := {}) -> void:
 
 
 func handle_input(_event: InputEvent) -> void:
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_just_pressed("move_left"):
 		state_machine.transition_to("Run", {"horizontal_direction" : -1, "facing_left" : true})
-	elif Input.is_action_pressed("move_right"):
+	elif Input.is_action_just_pressed("move_right"):
 		state_machine.transition_to("Run", {"horizontal_direction" : 1, "facing_left" : false})
-	elif Input.is_action_pressed("jump"):
+	elif Input.is_action_just_pressed("jump"):
 		state_machine.transition_to("Jump", {"facing_left": facing_left})

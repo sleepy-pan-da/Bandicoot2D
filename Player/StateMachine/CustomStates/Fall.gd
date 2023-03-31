@@ -25,7 +25,7 @@ func exit() -> void:
 
 
 func handle_input(_event: InputEvent) -> void:
-	if Input.is_action_pressed("jump") and player.raycast.is_colliding():
+	if Input.is_action_just_pressed("jump") and player.raycast.is_colliding():
 		state_machine.transition_to("Jump", {"velocity": velocity, "horizontal_direction": horizontal_direction, "facing_left": facing_left})
 	# horizontal movement
 	if Input.is_action_pressed("move_left"):
@@ -56,9 +56,9 @@ func update_horizontal_velocity(_delta: float) -> void:
 	if horizontal_direction != 0:
 		velocity.x += horizontal_direction * (player.ACCELERATION * _delta)
 		if velocity.x > 0: 
-			velocity.x = min(velocity.x, player.MAXSPEED_AIR)
+			velocity.x = min(velocity.x, player.MAXSPEED)
 		else: 
-			velocity.x = max(velocity.x, -player.MAXSPEED_AIR)
+			velocity.x = max(velocity.x, -player.MAXSPEED)
 	else:
 		# Deceleration
 		if velocity.x > 10: 

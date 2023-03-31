@@ -25,7 +25,7 @@ func exit() -> void:
 
 
 func handle_input(_event: InputEvent) -> void:
-	if Input.is_action_pressed("jump"):
+	if Input.is_action_just_pressed("jump"):
 		state_machine.transition_to("Jump", {"velocity": velocity, "horizontal_direction": horizontal_direction, "facing_left": facing_left})
 	
 	if Input.is_action_pressed("move_left"):

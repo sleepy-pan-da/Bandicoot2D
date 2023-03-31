@@ -57,9 +57,9 @@ func update_horizontal_velocity(_delta: float) -> void:
 	if horizontal_direction != 0:
 		velocity.x += horizontal_direction * (player.ACCELERATION * _delta)
 		if velocity.x > 0: 
-			velocity.x = min(velocity.x, player.MAXSPEED_AIR)
+			velocity.x = min(velocity.x, player.MAXSPEED)
 		else: 
-			velocity.x = max(velocity.x, -player.MAXSPEED_AIR)
+			velocity.x = max(velocity.x, -player.MAXSPEED)
 	else:
 		# Deceleration
 		if velocity.x > 10: 
