@@ -29,4 +29,5 @@ func _unhandled_input(_event: InputEvent) -> void:
 func _on_Hurtbox_area_entered(_area: Area2D) -> void:
     set_collision_mask_bit(0, false)
     hurtbox.set_collision_mask_bit(1, false)
+    hurtbox.set_collision_mask_bit(3, false)
     state_machine.transition_to("Death")
