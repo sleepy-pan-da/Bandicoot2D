@@ -11,6 +11,7 @@ const GRAVITY = 10
 onready var state_machine : StateMachine = $StateMachine
 onready var sprite_animation : AnimatedSprite = $SpriteAnimation
 onready var raycast : RayCast2D = $RayCast2D
+onready var hurtbox : Area2D = $Hurtbox
 
 func _ready() -> void:
     state_machine.connect("transitioned", self, "update_sprite_animation")
@@ -26,8 +27,6 @@ func _unhandled_input(_event: InputEvent) -> void:
 
 
 func _on_Hurtbox_area_entered(_area: Area2D) -> void:
-    die()
-
-
-func die() -> void:
-    queue_free()
+    set_collision_mask_bit(0, false)
+    hurtbox.set_collision_mask_bit(1, false)
+    state_machine.transition_to("Death")

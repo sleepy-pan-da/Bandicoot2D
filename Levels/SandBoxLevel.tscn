@@ -11,13 +11,13 @@
 [ext_resource path="res://Levels/SandBoxLevel.gd" type="Script" id=9]
 [ext_resource path="res://Phase/PhaseInHitbox/PhaseInHitbox.tscn" type="PackedScene" id=10]
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32, 32 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 32, 32 )
 
 [node name="SandBoxLevel" type="Node2D"]
@@ -46,7 +46,24 @@ tile_data = PoolIntArray( -1, 4, 0 )
 [node name="PhaseInHitbox" parent="GoldBox1" instance=ExtResource( 10 )]
 
 [node name="CollisionShape2D" parent="GoldBox1/PhaseInHitbox" index="0"]
-shape = SubResource( 4 )
+shape = SubResource( 1 )
+
+[node name="Test" type="StaticBody2D" parent="."]
+position = Vector2( 240, 160 )
+collision_mask = 0
+script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Test"]
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Test"]
+visible = false
+shape = SubResource( 2 )
+
+[node name="PhaseInHitbox" parent="Test" instance=ExtResource( 10 )]
+
+[node name="CollisionShape2D" parent="Test/PhaseInHitbox" index="0"]
+shape = SubResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 104, 56 )
@@ -75,23 +92,6 @@ margin_left = 32.0
 margin_top = 208.0
 margin_right = -32.0
 margin_bottom = 7.0
-
-[node name="Test" type="StaticBody2D" parent="."]
-position = Vector2( 240, 160 )
-collision_mask = 0
-script = ExtResource( 8 )
-
-[node name="Sprite" type="Sprite" parent="Test"]
-texture = ExtResource( 7 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Test"]
-visible = false
-shape = SubResource( 3 )
-
-[node name="PhaseInHitbox" parent="Test" instance=ExtResource( 10 )]
-
-[node name="CollisionShape2D" parent="Test/PhaseInHitbox" index="0"]
-shape = SubResource( 5 )
 
 [editable path="GoldBox1/PhaseInHitbox"]
 [editable path="Test/PhaseInHitbox"]
