@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Tilemaps/StoneTerrainTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilemaps/StationaryPlatformTileMap.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Phase/PhaseInHitbox/PhaseInHitbox.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Interactables/Traps/Spikes.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Interactables/Crates/BasicCrate.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
@@ -77,6 +78,12 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 2, 0 )
 
 [node name="Spikes" parent="." instance=ExtResource( 11 )]
 position = Vector2( 140, 184 )
+
+[node name="BasicCrate" parent="." instance=ExtResource( 13 )]
+position = Vector2( 72, 187 )
+
+[node name="BasicCrate2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 93, 168 )
 
 [node name="Player" parent="." instance=ExtResource( 12 )]
 position = Vector2( 104, 56 )

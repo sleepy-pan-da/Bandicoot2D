@@ -14,6 +14,8 @@ export var path_to_text_label := NodePath()
 onready var state : State = get_node(initial_state)
 onready var textLabel : Label = get_node(path_to_text_label)
 
+var prev_state : State
+
 func _ready() -> void:
 	yield(owner, "ready")
 	# The state machine assigns itself to the State objects' state_machine property.
@@ -44,6 +46,7 @@ func transition_to(target_state_name: String, msg: Dictionary = {}) -> void:
 	if !has_node(target_state_name): return
 
 	state.exit()
+	prev_state = state
 	state = get_node(target_state_name)
 	state.enter(msg)
 	textLabel.text = state.name
