@@ -31,10 +31,9 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 10, 9 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 9, 0.5 )
+extents = Vector2( 10, 1 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 10, 9 )
@@ -60,6 +59,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreasToBreakCrate/TopArea"]
+position = Vector2( 0, -1.5163 )
 shape = SubResource( 6 )
 
 [node name="BtmArea" type="Area2D" parent="AreasToBreakCrate"]
@@ -68,6 +68,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreasToBreakCrate/BtmArea"]
+position = Vector2( 0, 1.52699 )
 shape = SubResource( 6 )
 
 [node name="PhaseInHitbox" parent="." instance=ExtResource( 4 )]

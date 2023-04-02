@@ -39,7 +39,6 @@ tile_data = PoolIntArray( 524306, 12, 0, 524307, 13, 0, 524308, 13, 0, 524309, 1
 [node name="GoldBox1" type="Node2D" parent="."]
 position = Vector2( 176, 176 )
 script = ExtResource( 8 )
-phased_in = false
 path_to_tilemap = NodePath("GoldTerrainTileMap")
 
 [node name="GoldTerrainTileMap" parent="GoldBox1" instance=ExtResource( 5 )]
@@ -112,6 +111,15 @@ margin_left = 32.0
 margin_top = 208.0
 margin_right = -32.0
 margin_bottom = 7.0
+
+[node name="BasicCrate3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 121, 97 )
+
+[node name="BasicCrate4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 131, 97 )
+
+[node name="BasicCrate5" parent="." instance=ExtResource( 13 )]
+position = Vector2( 141, 97 )
 
 [editable path="GoldBox1/PhaseInHitbox"]
 [editable path="Platform/PhaseInHitbox"]
