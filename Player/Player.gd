@@ -1,12 +1,12 @@
 extends KinematicBody2D
 
 const ACCELERATION = 1200
-const MAXSPEED = 80
+const MAXSPEED = 150
 const MAXSPEED_AIR = 150
 const FRICTION = 1000
 const FLOOR_NORMAL = Vector2(0, -1)
-const JUMP_POWER = -250
-const GRAVITY = 10
+const JUMP_POWER = -350
+const GRAVITY = 12
 
 onready var state_machine : StateMachine = $StateMachine
 onready var sprite_animation : AnimatedSprite = $SpriteAnimation

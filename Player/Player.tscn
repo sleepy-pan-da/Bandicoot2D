@@ -147,14 +147,14 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=28]
-extents = Vector2( 4, 7 )
+extents = Vector2( 6, 14.0153 )
 
 [sub_resource type="DynamicFont" id=29]
 size = 8
 font_data = ExtResource( 4 )
 
 [sub_resource type="RectangleShape2D" id=30]
-extents = Vector2( 4, 6.67513 )
+extents = Vector2( 6, 13.1913 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 4
@@ -186,14 +186,13 @@ path_to_player = NodePath("../..")
 
 [node name="SpriteAnimation" type="AnimatedSprite" parent="."]
 position = Vector2( 9.53674e-07, 9.53674e-07 )
-scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 27 )
 animation = "Idle"
-frame = 9
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 1.01532 )
+position = Vector2( 0, 2 )
 shape = SubResource( 28 )
 
 [node name="Label" type="Label" parent="."]

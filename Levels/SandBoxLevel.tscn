@@ -30,14 +30,13 @@ script = ExtResource( 9 )
 
 [node name="StoneTerrainTileMap" parent="Terrain" instance=ExtResource( 1 )]
 collision_mask = 0
-tile_data = PoolIntArray( 65538, 8, 0, 65539, 5, 0, 65540, 5, 0, 65541, 5, 0, 65542, 5, 0, 65543, 5, 0, 65544, 5, 0, 65545, 5, 0, 65546, 5, 0, 65547, 5, 0, 65548, 5, 0, 65549, 5, 0, 65550, 5, 0, 65551, 5, 0, 65552, 5, 0, 65553, 5, 0, 65554, 5, 0, 65555, 5, 0, 65556, 5, 0, 65557, 5, 0, 65558, 9, 0, 131074, 7, 0, 131094, 3, 0, 196610, 7, 0, 196630, 3, 0, 262146, 7, 0, 262166, 3, 0, 327682, 7, 0, 327702, 3, 0, 393218, 7, 0, 393238, 3, 0, 458754, 7, 0, 458774, 3, 0, 524290, 7, 0, 524310, 3, 0, 589826, 7, 0, 589846, 3, 0, 655362, 7, 0, 655382, 3, 0, 720898, 7, 0, 720918, 3, 0, 786434, 10, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 1, 0, 786452, 1, 0, 786453, 1, 0, 786454, 11, 0 )
+tile_data = PoolIntArray( 196612, 8, 0, 196613, 5, 0, 196614, 5, 0, 196615, 5, 0, 196616, 5, 0, 196617, 5, 0, 196618, 5, 0, 196619, 5, 0, 196620, 5, 0, 196621, 5, 0, 196622, 5, 0, 196623, 5, 0, 196624, 5, 0, 196625, 5, 0, 196626, 5, 0, 196627, 5, 0, 196628, 5, 0, 196629, 5, 0, 196630, 5, 0, 196631, 5, 0, 196632, 5, 0, 196633, 5, 0, 196634, 5, 0, 196635, 5, 0, 196636, 5, 0, 196637, 5, 0, 196638, 5, 0, 196639, 5, 0, 196640, 5, 0, 196641, 5, 0, 196642, 5, 0, 196643, 5, 0, 196644, 5, 0, 196645, 5, 0, 196646, 5, 0, 196647, 5, 0, 196648, 9, 0, 262148, 7, 0, 262184, 3, 0, 327684, 7, 0, 327720, 3, 0, 393220, 7, 0, 393256, 3, 0, 458756, 7, 0, 458792, 3, 0, 524292, 7, 0, 524328, 3, 0, 589828, 7, 0, 589864, 3, 0, 655364, 7, 0, 655400, 3, 0, 720900, 7, 0, 720936, 3, 0, 786436, 7, 0, 786472, 3, 0, 851972, 7, 0, 852008, 3, 0, 917508, 7, 0, 917544, 3, 0, 983044, 7, 0, 983080, 3, 0, 1048580, 7, 0, 1048616, 3, 0, 1114116, 7, 0, 1114152, 3, 0, 1179652, 7, 0, 1179688, 3, 0, 1245188, 7, 0, 1245224, 3, 0, 1310724, 7, 0, 1310760, 3, 0, 1376260, 10, 0, 1376261, 1, 0, 1376262, 1, 0, 1376263, 1, 0, 1376264, 1, 0, 1376265, 1, 0, 1376266, 1, 0, 1376267, 1, 0, 1376268, 1, 0, 1376269, 1, 0, 1376270, 1, 0, 1376271, 1, 0, 1376272, 1, 0, 1376273, 1, 0, 1376274, 1, 0, 1376275, 1, 0, 1376276, 1, 0, 1376277, 1, 0, 1376278, 1, 0, 1376279, 1, 0, 1376280, 1, 0, 1376281, 1, 0, 1376282, 1, 0, 1376283, 1, 0, 1376284, 1, 0, 1376285, 1, 0, 1376286, 1, 0, 1376287, 1, 0, 1376288, 1, 0, 1376289, 1, 0, 1376290, 1, 0, 1376291, 1, 0, 1376292, 1, 0, 1376293, 1, 0, 1376294, 1, 0, 1376295, 1, 0, 1376296, 11, 0 )
 
 [node name="GrassTerrainTileMap" parent="Terrain" instance=ExtResource( 6 )]
 show_collision = true
-tile_data = PoolIntArray( 524306, 12, 0, 524307, 13, 0, 524308, 13, 0, 524309, 14, 0, 589842, 15, 0, 589843, 16, 0, 589844, 16, 0, 589845, 17, 0, 655378, 15, 0, 655379, 16, 0, 655380, 16, 0, 655381, 17, 0, 720914, 18, 0, 720915, 19, 0, 720916, 19, 0, 720917, 20, 0 )
 
 [node name="GoldBox1" type="Node2D" parent="."]
-position = Vector2( 176, 176 )
+position = Vector2( 236, 320 )
 script = ExtResource( 8 )
 path_to_tilemap = NodePath("GoldTerrainTileMap")
 
@@ -51,7 +50,7 @@ tile_data = PoolIntArray( -1, 4, 0 )
 shape = SubResource( 1 )
 
 [node name="Platform" type="StaticBody2D" parent="."]
-position = Vector2( 240, 160 )
+position = Vector2( 312, 304 )
 collision_mask = 0
 script = ExtResource( 8 )
 
@@ -70,22 +69,22 @@ shape = SubResource( 3 )
 [node name="Platforms" type="Node2D" parent="."]
 
 [node name="Platform1" type="Node2D" parent="Platforms"]
-position = Vector2( 100, 92 )
+position = Vector2( 100, 123 )
 
 [node name="StationaryPlatformTileMap" parent="Platforms/Platform1" instance=ExtResource( 2 )]
 tile_data = PoolIntArray( 0, 0, 0, 1, 2, 0 )
 
 [node name="Spikes" parent="." instance=ExtResource( 11 )]
-position = Vector2( 140, 184 )
+position = Vector2( 184, 328 )
 
 [node name="BasicCrate" parent="." instance=ExtResource( 13 )]
-position = Vector2( 72, 187 )
+position = Vector2( 90, 326 )
 
 [node name="BasicCrate2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 110, 187 )
+position = Vector2( 166, 326 )
 
 [node name="Player" parent="." instance=ExtResource( 12 )]
-position = Vector2( 104, 56 )
+position = Vector2( 108, 80 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
 
@@ -93,36 +92,49 @@ position = Vector2( 104, 56 )
 layer = -2
 
 [node name="RegularBackground" parent="Background" instance=ExtResource( 4 )]
-margin_left = 368.0
-margin_bottom = 7.0
+margin_left = 0.0
+margin_bottom = -357.0
+
+[node name="RegularBackground3" parent="Background" instance=ExtResource( 4 )]
+margin_left = 0.0
+margin_top = 352.0
+margin_bottom = 0.0
 
 [node name="RegularBackground2" parent="Background" instance=ExtResource( 4 )]
 margin_left = 0.0
-margin_right = -368.0
-margin_bottom = 7.0
-
-[node name="RegularBackground3" parent="Background" instance=ExtResource( 4 )]
-margin_left = 32.0
-margin_right = -32.0
-margin_bottom = -209.0
+margin_top = 48.0
+margin_right = -656.0
+margin_bottom = -53.0
 
 [node name="RegularBackground4" parent="Background" instance=ExtResource( 4 )]
-margin_left = 32.0
-margin_top = 208.0
-margin_right = -32.0
-margin_bottom = 7.0
+margin_left = 656.0
+margin_top = 48.0
+margin_bottom = -53.0
 
 [node name="BasicCrate3" parent="." instance=ExtResource( 13 )]
-position = Vector2( 121, 97 )
+position = Vector2( 354, 282 )
 
 [node name="BasicCrate4" parent="." instance=ExtResource( 13 )]
-position = Vector2( 131, 97 )
+position = Vector2( 374, 282 )
 
 [node name="BasicCrate5" parent="." instance=ExtResource( 13 )]
-position = Vector2( 141, 97 )
+position = Vector2( 394, 282 )
 
 [node name="BasicCrate6" parent="." instance=ExtResource( 13 )]
-position = Vector2( 110, 144 )
+position = Vector2( 166, 246.997 )
+
+[node name="BasicCrate7" parent="." instance=ExtResource( 13 )]
+position = Vector2( 90, 306 )
+
+[node name="BasicCrate8" parent="." instance=ExtResource( 13 )]
+position = Vector2( 90, 286.328 )
+
+[node name="BasicCrate9" parent="." instance=ExtResource( 13 )]
+position = Vector2( 90, 266.6 )
+
+[node name="BasicCrate10" parent="." instance=ExtResource( 13 )]
+position = Vector2( 90, 246.997 )
 
 [editable path="GoldBox1/PhaseInHitbox"]
 [editable path="Platform/PhaseInHitbox"]
+[editable path="Background/RegularBackground3"]
