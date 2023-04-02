@@ -18,6 +18,9 @@ func enter(_msg := {}) -> void:
 	if "facing_left" in _msg:	
 		facing_left = _msg["facing_left"]
 	player.sprite_animation.flip_h = facing_left
+	if "jump_power" in _msg:
+		velocity.y = _msg["jump_power"]
+		return
 	velocity.y = player.JUMP_POWER
 
 

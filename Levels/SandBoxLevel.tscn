@@ -82,7 +82,7 @@ position = Vector2( 140, 184 )
 position = Vector2( 72, 187 )
 
 [node name="BasicCrate2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 93, 168 )
+position = Vector2( 110, 187 )
 
 [node name="Player" parent="." instance=ExtResource( 12 )]
 position = Vector2( 104, 56 )
@@ -120,6 +120,9 @@ position = Vector2( 131, 97 )
 
 [node name="BasicCrate5" parent="." instance=ExtResource( 13 )]
 position = Vector2( 141, 97 )
+
+[node name="BasicCrate6" parent="." instance=ExtResource( 13 )]
+position = Vector2( 110, 144 )
 
 [editable path="GoldBox1/PhaseInHitbox"]
 [editable path="Platform/PhaseInHitbox"]
