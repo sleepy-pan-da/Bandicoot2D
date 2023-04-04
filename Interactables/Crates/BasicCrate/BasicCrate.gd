@@ -2,9 +2,13 @@ extends TogglePhase
 
 const BOX_BOUNCE_POWER = -250
 
+export(Array, PackedScene) var broken_particles
+
 onready var top_area = $AreasToBreakCrate/TopArea
 onready var btm_area = $AreasToBreakCrate/BtmArea
 onready var animated_sprite = $AnimatedSprite
+
+
 
 var breaking : bool = false
 
@@ -39,4 +43,26 @@ func hit_crate() -> void:
 
 
 func _on_AnimatedSprite_animation_finished() -> void:
-	if breaking: queue_free()
+	if breaking:
+		break_into_pieces()
+		queue_free()
+
+
+func break_into_pieces() -> void:
+	var particles = []
+	for particle in broken_particles:
+		particles.append(particle.instance())
+		
+	for particle in particles:
+		get_parent().add_child(particle)
+		particle.global_position = global_position
+	
+	particles[0].apply_central_impulse(Vector2(-get_rand_int_between(50, 70), -get_rand_int_between(120, 150)))
+	particles[1].apply_central_impulse(Vector2(get_rand_int_between(50, 70), -get_rand_int_between(120, 150)))
+	particles[2].apply_central_impulse(Vector2(-get_rand_int_between(50, 70), get_rand_int_between(50, 70)))
+	particles[3].apply_central_impulse(Vector2(get_rand_int_between(50, 70), get_rand_int_between(50, 70)))
+
+
+func get_rand_int_between(start_val : int, end_val : int) -> int:
+	randomize()
+	return (randi() % (end_val-start_val) + start_val)

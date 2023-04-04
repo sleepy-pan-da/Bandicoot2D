@@ -12,7 +12,7 @@
 [ext_resource path="res://Phase/PhaseInHitbox/PhaseInHitbox.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Interactables/Traps/Spikes.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Interactables/Crates/BasicCrate.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Interactables/Crates/BasicCrate/BasicCrate.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
