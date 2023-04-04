@@ -29,9 +29,11 @@ func handle_input(_event: InputEvent) -> void:
 		state_machine.transition_to("Jump", {"velocity": velocity, "horizontal_direction": horizontal_direction, "facing_left": facing_left})
 	
 	if Input.is_action_pressed("move_left"):
+		print("pressed left")
 		horizontal_direction = -1
 		facing_left = true
 	elif Input.is_action_pressed("move_right"):
+		print("pressed right")
 		horizontal_direction = 1
 		facing_left = false
 	else: 
