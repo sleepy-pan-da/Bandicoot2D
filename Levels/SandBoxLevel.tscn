@@ -123,18 +123,6 @@ position = Vector2( 394, 282 )
 [node name="BasicCrate6" parent="." instance=ExtResource( 13 )]
 position = Vector2( 166, 246.997 )
 
-[node name="BasicCrate7" parent="." instance=ExtResource( 13 )]
-position = Vector2( 90, 306 )
-
-[node name="BasicCrate8" parent="." instance=ExtResource( 13 )]
-position = Vector2( 90, 286.328 )
-
-[node name="BasicCrate9" parent="." instance=ExtResource( 13 )]
-position = Vector2( 90, 266.6 )
-
-[node name="BasicCrate10" parent="." instance=ExtResource( 13 )]
-position = Vector2( 90, 246.997 )
-
 [editable path="GoldBox1/PhaseInHitbox"]
 [editable path="Platform/PhaseInHitbox"]
 [editable path="Background/RegularBackground3"]

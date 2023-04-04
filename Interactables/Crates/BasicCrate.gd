@@ -9,19 +9,22 @@ onready var animated_sprite = $AnimatedSprite
 var breaking : bool = false
 
 func _on_TopArea_body_entered(body : Node) -> void:
-	# print("cur state: {cur_state}".format({"cur_state": body.state_machine.state.name}))
-	# print("cur velocity: {cur_velo}".format({"cur_velo": body.state_machine.state.velocity}))
+	# There are cases where the state can be run or idle, but those are hard to come by as
+	# the player needs to be pixel perfect
 	if body.state_machine.state.name == "Jump":
+		# This is for cases where the player shorthops onto the crate, breaking the crate in the jump state.
+		# To solve this issue, the top area is toggled off and on to ensure that the crate is only broken in
+		# the fall state.
 		top_area.set_deferred("monitoring", false)
 		top_area.set_deferred("monitoring", true)
 	elif body.state_machine.state.name == "Fall":
 		body.state_machine.transition_to("Jump", {"velocity": body.state_machine.state.velocity, "jump_power": BOX_BOUNCE_POWER, "facing_left": body.state_machine.state.facing_left})
-		break_crate()
+		hit_crate()
 
 
 func _on_BtmArea_body_entered(body) -> void:
 	if body.state_machine.state.name == "Jump":
-		break_crate()
+		hit_crate()
 
 
 # overrides func in base
@@ -30,7 +33,7 @@ func custom_update() -> void:
 	btm_area.set_collision_mask_bit(2, phased_in)
 
 
-func break_crate() -> void:
+func hit_crate() -> void:
 	breaking = true
 	animated_sprite.play("Breaking")
 
