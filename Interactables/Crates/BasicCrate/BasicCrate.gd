@@ -3,6 +3,7 @@ extends TogglePhase
 const BOX_BOUNCE_POWER = -250
 
 export(Array, PackedScene) var broken_particles
+export(PackedScene) var fruit
 
 onready var top_area = $AreasToBreakCrate/TopArea
 onready var btm_area = $AreasToBreakCrate/BtmArea
@@ -45,6 +46,7 @@ func hit_crate() -> void:
 func _on_AnimatedSprite_animation_finished() -> void:
 	if breaking:
 		break_into_pieces()
+		spill_out_fruit()
 		queue_free()
 
 
@@ -61,6 +63,13 @@ func break_into_pieces() -> void:
 	particles[1].apply_central_impulse(Vector2(get_rand_int_between(50, 70), -get_rand_int_between(120, 150)))
 	particles[2].apply_central_impulse(Vector2(-get_rand_int_between(50, 70), get_rand_int_between(50, 70)))
 	particles[3].apply_central_impulse(Vector2(get_rand_int_between(50, 70), get_rand_int_between(50, 70)))
+
+
+func spill_out_fruit() -> void:
+	var spilled_fruit = fruit.instance()
+	get_parent().add_child(spilled_fruit)
+	spilled_fruit.global_position = global_position
+	spilled_fruit.apply_central_impulse(Vector2(0, -100))
 
 
 func get_rand_int_between(start_val : int, end_val : int) -> int:

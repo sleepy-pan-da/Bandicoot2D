@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Assets/Pixel Adventure 1/Free/Items/Boxes/Box1/Idle.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Pixel Adventure 1/Free/Items/Boxes/Box1/Hit (28x24).png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Interactables/Crates/BasicCrate/BasicCrateParticles/BasicCrateParticle1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Interactables/Crates/BasicCrate/BasicCrateParticles/BasicCrateParticle2.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Interactables/Crates/BasicCrate/BasicCrateParticles/BasicCrateParticle3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Interactables/Fruits/Fruit.tscn" type="PackedScene" id=9]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -46,6 +47,7 @@ extents = Vector2( 10, 9 )
 collision_mask = 0
 script = ExtResource( 4 )
 broken_particles = [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 5 ) ]
+fruit = ExtResource( 9 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 4 )

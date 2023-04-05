@@ -87,13 +87,14 @@ extents = Vector2( 16, 13 )
 
 [node name="Fruit" type="RigidBody2D"]
 collision_layer = 0
+gravity_scale = 5.0
 script = ExtResource( 2 )
 collectedFruitVfx = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 18 )
 animation = "Idle"
-frame = 9
+frame = 14
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
