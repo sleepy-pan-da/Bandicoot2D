@@ -28,10 +28,12 @@ func exit() -> void:
 	horizontal_direction = 0
 	velocity = Vector2()
 
-# The code here will usually be in handle_input
-# but it needs to be here for increased precision
-# when jumping off crates
-func update(_delta: float) -> void:
+
+func process_input() -> void:
+	# short hop
+	if Input.is_action_just_released("jump"):
+		velocity.y *= 0.5
+	
 	# horizontal movement
 	if Input.is_action_pressed("move_left"):
 		horizontal_direction = -1
@@ -42,15 +44,10 @@ func update(_delta: float) -> void:
 	else:
 		horizontal_direction = 0
 	player.sprite_animation.flip_h = facing_left
-
-
-func handle_input(_event: InputEvent) -> void:
-	# short hop
-	if Input.is_action_just_released("jump"):
-		velocity.y *= 0.5
 	
 	
 func physics_update(_delta: float) -> void:
+	process_input()
 	update_horizontal_velocity(_delta)
 	velocity.y += player.GRAVITY
 	velocity = player.move_and_slide(velocity, player.FLOOR_NORMAL)

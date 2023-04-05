@@ -24,9 +24,10 @@ func exit() -> void:
 	velocity = Vector2()
 
 
-func handle_input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("jump") and player.raycast.is_colliding():
+func process_input() -> void:
+	if Input.is_action_pressed("jump") and player.raycast.is_colliding():
 		state_machine.transition_to("Jump", {"velocity": velocity, "horizontal_direction": horizontal_direction, "facing_left": facing_left})
+	
 	# horizontal movement
 	if Input.is_action_pressed("move_left"):
 		horizontal_direction = -1
@@ -40,6 +41,7 @@ func handle_input(_event: InputEvent) -> void:
 
 
 func physics_update(_delta: float) -> void:
+	process_input()
 	update_horizontal_velocity(_delta)
 	velocity.y += player.GRAVITY
 	velocity = player.move_and_slide(velocity, player.FLOOR_NORMAL)

@@ -16,7 +16,8 @@ func enter(_msg := {}) -> void:
 		horizontal_direction = _msg["horizontal_direction"]
 	if "facing_left" in _msg:	
 		facing_left = _msg["facing_left"]
-	player.sprite_animation.flip_h = facing_left	
+	player.sprite_animation.flip_h = facing_left
+	pass
 
 
 func exit() -> void:
@@ -24,16 +25,14 @@ func exit() -> void:
 	velocity = Vector2()
 
 
-func handle_input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("jump"):
+func process_input() -> void:
+	if Input.is_action_pressed("jump"):
 		state_machine.transition_to("Jump", {"velocity": velocity, "horizontal_direction": horizontal_direction, "facing_left": facing_left})
 	
 	if Input.is_action_pressed("move_left"):
-		print("pressed left")
 		horizontal_direction = -1
 		facing_left = true
 	elif Input.is_action_pressed("move_right"):
-		print("pressed right")
 		horizontal_direction = 1
 		facing_left = false
 	else: 
@@ -42,6 +41,7 @@ func handle_input(_event: InputEvent) -> void:
 
 
 func physics_update(_delta: float) -> void:
+	process_input()
 	update_horizontal_velocity(_delta)
 	velocity.y += player.GRAVITY
 	velocity = player.move_and_slide(velocity, player.FLOOR_NORMAL)
