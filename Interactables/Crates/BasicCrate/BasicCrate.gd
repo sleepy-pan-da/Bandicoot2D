@@ -1,4 +1,5 @@
 extends TogglePhase
+class_name BasicCrate
 
 const BOX_BOUNCE_POWER = -250
 
