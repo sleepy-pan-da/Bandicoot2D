@@ -3,7 +3,7 @@
 [ext_resource path="res://Interactables/Crates/CrateParticle.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Pixel Adventure 1/Free/Items/Boxes/NitroBox/Break.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 4 )
 
 [sub_resource type="Animation" id=2]
@@ -48,7 +48,7 @@ hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -1 )
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0

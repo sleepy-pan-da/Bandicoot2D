@@ -9,6 +9,12 @@ func hit_crate() -> void:
 	animated_sprite.play("Breaking")
 
 
+func break_crate() -> void:
+	hits_left = 0
+	breaking = true
+	animated_sprite.play("Breaking")
+
+
 # override func in BasicCrate
 func _on_AnimatedSprite_animation_finished() -> void:
 	if breaking:

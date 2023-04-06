@@ -5,7 +5,7 @@ export var can_be_toggled : bool = true
 export var phased_in : bool = true
 export var path_to_tilemap := NodePath()
 export var damages_player : bool = false
-onready var phase_in_hitbox : Area2D = $PhaseInHitbox
+onready var phase_in_hitbox : Area2D
 var physics_body : Node2D = self
 
 # THINGS THAT CAN BE PHASED
@@ -13,7 +13,10 @@ var physics_body : Node2D = self
 # terrain
 # damages player
 
+# Might need to refactor this if it gets out of hand
+
 func _ready() -> void:
+	phase_in_hitbox = get_node_or_null("PhaseInHitbox")
 	if !can_be_toggled: return
 	if path_to_tilemap: physics_body = get_node(path_to_tilemap)
 	EventManager.connect("toggle_phase", self, "change_phase_state")
@@ -27,6 +30,11 @@ func change_phase_state() -> void:
 
 func update() -> void:
 	modulate = Color(1,1,1,1) if phased_in else Color(1,1,1,0.3)
+
+	if !phase_in_hitbox:
+		# NITRO
+		physics_body.set_collision_mask_bit(2, phased_in)
+		return
 
 	# phase in hitbox will kick in before physics collisions to properly check if player is within phased in objects 
 	phase_in_hitbox.set_collision_layer_bit(1, phased_in)
