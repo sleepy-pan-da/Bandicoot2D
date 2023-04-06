@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Tilemaps/StoneTerrainTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilemaps/StationaryPlatformTileMap.tscn" type="PackedScene" id=2]
@@ -15,6 +15,9 @@
 [ext_resource path="res://Interactables/Crates/BasicCrate/BasicCrate.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Interactables/Fruits/Fruit.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Interactables/Crates/BounceCrate/BounceCrate.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Assets/Pixel Adventure 1/Free/Items/Boxes/NitroBox/Idle.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Pixel Adventure 1/Free/Items/Boxes/NitroBox/Break.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Pixel Adventure 1/Free/Items/Boxes/NitroBox/Hit (28x24).png" type="Texture" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
@@ -133,6 +136,18 @@ position = Vector2( 204, 326 )
 
 [node name="BounceCrate2" parent="." instance=ExtResource( 15 )]
 position = Vector2( 204, 246.997 )
+
+[node name="Idle" type="Sprite" parent="."]
+position = Vector2( 414, 282 )
+texture = ExtResource( 16 )
+
+[node name="Break" type="Sprite" parent="Idle"]
+position = Vector2( -40, -42 )
+texture = ExtResource( 17 )
+
+[node name="Hit (28x24)" type="Sprite" parent="Idle"]
+position = Vector2( -39, -64 )
+texture = ExtResource( 18 )
 
 [editable path="GoldBox1/PhaseInHitbox"]
 [editable path="Platform/PhaseInHitbox"]
