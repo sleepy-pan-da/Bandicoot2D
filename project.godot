@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Interactables/Crates/BasicCrate/BasicCrate.gd"
 }, {
+"base": "Node2D",
+"class": "FakeConfettiParticles",
+"language": "GDScript",
+"path": "res://ParticleEffects/fake_confetti_particles.gd"
+}, {
 "base": "Node",
 "class": "State",
 "language": "GDScript",
@@ -31,6 +36,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "BasicCrate": "",
+"FakeConfettiParticles": "",
 "State": "",
 "StateMachine": "",
 "TogglePhase": ""
