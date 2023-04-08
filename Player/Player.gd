@@ -13,9 +13,12 @@ onready var sprite_animation : AnimatedSprite = $SpriteAnimation
 onready var raycast : RayCast2D = $RayCast2D
 onready var hurtbox : Area2D = $Hurtbox
 
+export var facing_left_initially : bool = false
+
+
 func _ready() -> void:
     state_machine.connect("transitioned", self, "update_sprite_animation")
-
+    state_machine.get_node("Idle").facing_left = facing_left_initially
 
 func update_sprite_animation(new_animation_name : String):
     sprite_animation.animation = new_animation_name

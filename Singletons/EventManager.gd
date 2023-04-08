@@ -17,3 +17,5 @@ extends Node
 # signal computedTimeEarnedFromDeletingBlocks(timeEarned)
 
 signal toggle_phase()
+
+signal collected_fruit()

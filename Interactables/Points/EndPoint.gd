@@ -1,4 +1,5 @@
 extends Node2D
+class_name EndPoint
 
 onready var animated_sprite : AnimatedSprite = $AnimatedSprite
 onready var area2d : Area2D = $Area2D
@@ -7,8 +8,13 @@ onready var confetti : FakeConfettiParticles = $FakeConfettiParticles
 var is_flag_out : bool = false
 
 func _ready() -> void:
-	animated_sprite.play("Default")
+	animated_sprite.play("Disabled")
 
+
+func enable() -> void:
+	area2d.set_deferred("monitoring", true)
+	animated_sprite.play("Enabled")
+	
 
 func _on_Area2D_body_entered(_body : Node) -> void:
 	reached()

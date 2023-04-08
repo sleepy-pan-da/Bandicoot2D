@@ -15,9 +15,19 @@ _global_script_classes=[ {
 "path": "res://Interactables/Crates/BasicCrate/BasicCrate.gd"
 }, {
 "base": "Node2D",
+"class": "EndPoint",
+"language": "GDScript",
+"path": "res://Interactables/Points/EndPoint.gd"
+}, {
+"base": "Node2D",
 "class": "FakeConfettiParticles",
 "language": "GDScript",
 "path": "res://ParticleEffects/fake_confetti_particles.gd"
+}, {
+"base": "Node2D",
+"class": "LevelManager",
+"language": "GDScript",
+"path": "res://Levels/LevelManager.gd"
 }, {
 "base": "Node",
 "class": "State",
@@ -36,7 +46,9 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "BasicCrate": "",
+"EndPoint": "",
 "FakeConfettiParticles": "",
+"LevelManager": "",
 "State": "",
 "StateMachine": "",
 "TogglePhase": ""
