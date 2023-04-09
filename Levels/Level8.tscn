@@ -1,0 +1,413 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tilemaps/GrassTerrainTileMap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Interactables/Crates/NitroCrate/NitroCrate.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Interactables/Traps/Spikes.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Tilemaps/GoldTerrainTileMap.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" type="Texture" id=6]
+[ext_resource path="res://Phase/TogglePhase.gd" type="Script" id=7]
+[ext_resource path="res://Phase/PhaseInHitbox/PhaseInHitbox.tscn" type="PackedScene" id=8]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="TileSet" id=9]
+0/name = "Terrain (16x16).png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 272, 128, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Terrain (16x16).png 1"
+1/texture = ExtResource( 6 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 288, 128, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Terrain (16x16).png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 304, 128, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "Terrain (16x16).png 3"
+3/texture = ExtResource( 6 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 272, 144, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 4 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "Terrain (16x16).png 4"
+4/texture = ExtResource( 6 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 288, 144, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 5 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "Terrain (16x16).png 5"
+5/texture = ExtResource( 6 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 320, 128, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 6 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "Terrain (16x16).png 6"
+6/texture = ExtResource( 6 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 320, 144, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 7 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "Terrain (16x16).png 7"
+7/texture = ExtResource( 6 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 320, 160, 16, 16 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 8 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 31, 64 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 31, 15 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 31, 15 )
+
+[node name="Level8" instance=ExtResource( 1 )]
+
+[node name="GrassTerrainTileMap" parent="Terrain" index="0" instance=ExtResource( 2 )]
+tile_data = PoolIntArray( 524292, 8, 0, 524293, 6, 0, 524294, 6, 0, 524295, 6, 0, 524296, 6, 0, 524297, 6, 0, 524298, 6, 0, 524299, 6, 0, 524300, 6, 0, 524301, 6, 0, 524302, 6, 0, 524303, 6, 0, 524304, 6, 0, 524305, 6, 0, 524306, 6, 0, 524307, 6, 0, 524308, 6, 0, 524309, 6, 0, 524310, 6, 0, 524311, 6, 0, 524312, 6, 0, 524313, 6, 0, 524314, 6, 0, 524315, 6, 0, 524316, 6, 0, 524317, 6, 0, 524318, 6, 0, 524319, 6, 0, 524320, 6, 0, 524321, 6, 0, 524322, 6, 0, 524323, 6, 0, 524324, 6, 0, 524325, 6, 0, 524326, 6, 0, 524327, 6, 0, 524328, 9, 0, 589828, 4, 0, 589864, 3, 0, 655364, 4, 0, 655400, 3, 0, 720900, 4, 0, 720936, 3, 0, 786436, 4, 0, 786472, 3, 0, 851972, 4, 0, 852008, 3, 0, 917508, 4, 0, 917544, 3, 0, 983044, 4, 0, 983080, 3, 0, 1048580, 4, 0, 1048616, 3, 0, 1114116, 4, 0, 1114152, 3, 0, 1179652, 10, 0, 1179653, 1, 0, 1179654, 1, 0, 1179655, 1, 0, 1179656, 1, 0, 1179657, 1, 0, 1179658, 1, 0, 1179659, 1, 0, 1179660, 1, 0, 1179661, 1, 0, 1179662, 1, 0, 1179663, 1, 0, 1179664, 1, 0, 1179665, 1, 0, 1179666, 1, 0, 1179667, 1, 0, 1179668, 1, 0, 1179669, 1, 0, 1179670, 1, 0, 1179671, 1, 0, 1179672, 1, 0, 1179673, 1, 0, 1179674, 1, 0, 1179675, 1, 0, 1179676, 1, 0, 1179677, 1, 0, 1179678, 1, 0, 1179679, 1, 0, 1179680, 1, 0, 1179681, 1, 0, 1179682, 1, 0, 1179683, 1, 0, 1179684, 1, 0, 1179685, 1, 0, 1179686, 1, 0, 1179687, 1, 0, 1179688, 11, 0 )
+
+[node name="Nitro1" type="Node2D" parent="." index="1"]
+
+[node name="NitroCrate" parent="Nitro1" index="0" instance=ExtResource( 3 )]
+position = Vector2( 167, 278 )
+phased_in = false
+
+[node name="NitroCrate2" parent="Nitro1" index="1" instance=ExtResource( 3 )]
+position = Vector2( 251, 278 )
+
+[node name="Spikes1" type="Node2D" parent="." index="2"]
+
+[node name="Spikes" parent="Spikes1" index="0" instance=ExtResource( 4 )]
+position = Vector2( 185, 280 )
+can_be_toggled = false
+
+[node name="Spikes2" parent="Spikes1" index="1" instance=ExtResource( 4 )]
+position = Vector2( 201, 280 )
+can_be_toggled = false
+
+[node name="Spikes3" parent="Spikes1" index="2" instance=ExtResource( 4 )]
+position = Vector2( 217, 280 )
+can_be_toggled = false
+
+[node name="Spikes4" parent="Spikes1" index="3" instance=ExtResource( 4 )]
+position = Vector2( 233, 280 )
+can_be_toggled = false
+
+[node name="Wall1" type="Node2D" parent="." index="3"]
+position = Vector2( 1, 1 )
+script = ExtResource( 7 )
+phased_in = false
+path_to_tilemap = NodePath("GoldTerrainTileMap")
+
+[node name="GoldTerrainTileMap" parent="Wall1" index="0" instance=ExtResource( 5 )]
+tile_set = SubResource( 9 )
+tile_data = PoolIntArray( 655380, 4, 0, 655382, 4, 0, 786452, 4, 0, 786454, 4, 0, 917524, 4, 0, 917526, 4, 0, 1048596, 4, 0, 1048598, 4, 0 )
+
+[node name="PhaseInHitbox" parent="Wall1" index="1" instance=ExtResource( 8 )]
+position = Vector2( 329, 173 )
+
+[node name="CollisionShape2D" parent="Wall1/PhaseInHitbox" index="0"]
+position = Vector2( 23, 52 )
+shape = SubResource( 10 )
+
+[node name="Nitro2" type="Node2D" parent="." index="4"]
+
+[node name="NitroCrate" parent="Nitro2" index="0" instance=ExtResource( 3 )]
+position = Vector2( 394, 278 )
+
+[node name="NitroCrate2" parent="Nitro2" index="1" instance=ExtResource( 3 )]
+position = Vector2( 414, 278 )
+
+[node name="NitroCrate3" parent="Nitro2" index="2" instance=ExtResource( 3 )]
+position = Vector2( 434, 278 )
+
+[node name="NitroCrate4" parent="Nitro2" index="3" instance=ExtResource( 3 )]
+position = Vector2( 394, 258 )
+
+[node name="NitroCrate5" parent="Nitro2" index="4" instance=ExtResource( 3 )]
+position = Vector2( 414, 258 )
+
+[node name="NitroCrate6" parent="Nitro2" index="5" instance=ExtResource( 3 )]
+position = Vector2( 434, 258 )
+
+[node name="NitroCrate7" parent="Nitro2" index="6" instance=ExtResource( 3 )]
+position = Vector2( 394, 238 )
+
+[node name="NitroCrate8" parent="Nitro2" index="7" instance=ExtResource( 3 )]
+position = Vector2( 414, 238 )
+
+[node name="NitroCrate9" parent="Nitro2" index="8" instance=ExtResource( 3 )]
+position = Vector2( 434, 238 )
+
+[node name="GoldBlock1" type="Node2D" parent="." index="5"]
+position = Vector2( 493, 256 )
+script = ExtResource( 7 )
+path_to_tilemap = NodePath("GoldTerrainTileMap")
+
+[node name="GoldTerrainTileMap" parent="GoldBlock1" index="0" instance=ExtResource( 5 )]
+tile_data = PoolIntArray( 65534, 4, 0, 0, 4, 0 )
+
+[node name="PhaseInHitbox" parent="GoldBlock1" index="1" instance=ExtResource( 8 )]
+
+[node name="CollisionShape2D" parent="GoldBlock1/PhaseInHitbox" index="0"]
+position = Vector2( 0, 16 )
+shape = SubResource( 11 )
+
+[node name="Nitro3" type="Node2D" parent="." index="6"]
+position = Vector2( 136, 0 )
+
+[node name="NitroCrate" parent="Nitro3" index="0" instance=ExtResource( 3 )]
+position = Vector2( 414, 238 )
+
+[node name="NitroCrate2" parent="Nitro3" index="1" instance=ExtResource( 3 )]
+position = Vector2( 414, 278 )
+
+[node name="NitroCrate3" parent="Nitro3" index="2" instance=ExtResource( 3 )]
+position = Vector2( 414, 218 )
+
+[node name="NitroCrate4" parent="Nitro3" index="3" instance=ExtResource( 3 )]
+position = Vector2( 414, 198 )
+
+[node name="NitroCrate5" parent="Nitro3" index="4" instance=ExtResource( 3 )]
+position = Vector2( 414, 258 )
+
+[node name="NitroCrate6" parent="Nitro3" index="5" instance=ExtResource( 3 )]
+position = Vector2( 414, 178 )
+
+[node name="GoldBlock3" type="Node2D" parent="." index="7"]
+position = Vector2( 576, 256 )
+script = ExtResource( 7 )
+path_to_tilemap = NodePath("GoldTerrainTileMap")
+
+[node name="GoldTerrainTileMap" parent="GoldBlock3" index="0" instance=ExtResource( 5 )]
+tile_data = PoolIntArray( 0, 4, 0, 2, 4, 0 )
+
+[node name="PhaseInHitbox" parent="GoldBlock3" index="1" instance=ExtResource( 8 )]
+
+[node name="CollisionShape2D" parent="GoldBlock3/PhaseInHitbox" index="0"]
+position = Vector2( 32, 16 )
+shape = SubResource( 13 )
+
+[node name="Spikes2" type="Node2D" parent="." index="8"]
+position = Vector2( 284, 0 )
+
+[node name="Spikes" parent="Spikes2" index="0" instance=ExtResource( 4 )]
+position = Vector2( 185, 280 )
+can_be_toggled = false
+
+[node name="Spikes2" parent="Spikes2" index="1" instance=ExtResource( 4 )]
+position = Vector2( 201, 280 )
+can_be_toggled = false
+
+[node name="Spikes3" parent="Spikes2" index="2" instance=ExtResource( 4 )]
+position = Vector2( 217, 280 )
+can_be_toggled = false
+
+[node name="Spikes4" parent="Spikes2" index="3" instance=ExtResource( 4 )]
+position = Vector2( 233, 280 )
+can_be_toggled = false
+
+[node name="Spikes5" parent="Spikes2" index="4" instance=ExtResource( 4 )]
+position = Vector2( 249, 280 )
+can_be_toggled = false
+
+[node name="Spikes6" parent="Spikes2" index="5" instance=ExtResource( 4 )]
+position = Vector2( 265, 280 )
+can_be_toggled = false
+
+[node name="Spikes7" parent="Spikes2" index="6" instance=ExtResource( 4 )]
+position = Vector2( 281, 280 )
+can_be_toggled = false
+
+[node name="Spikes8" parent="Spikes2" index="7" instance=ExtResource( 4 )]
+position = Vector2( 297, 280 )
+can_be_toggled = false
+
+[node name="Spikes9" parent="Spikes2" index="8" instance=ExtResource( 4 )]
+position = Vector2( 249, 280 )
+can_be_toggled = false
+
+[node name="Spikes10" parent="Spikes2" index="9" instance=ExtResource( 4 )]
+position = Vector2( 265, 280 )
+can_be_toggled = false
+
+[node name="Spikes11" parent="Spikes2" index="10" instance=ExtResource( 4 )]
+position = Vector2( 281, 280 )
+can_be_toggled = false
+
+[node name="Spikes12" parent="Spikes2" index="11" instance=ExtResource( 4 )]
+position = Vector2( 297, 280 )
+can_be_toggled = false
+
+[node name="Spikes13" parent="Spikes2" index="12" instance=ExtResource( 4 )]
+position = Vector2( 313, 280 )
+can_be_toggled = false
+
+[node name="Spikes14" parent="Spikes2" index="13" instance=ExtResource( 4 )]
+position = Vector2( 329, 280 )
+can_be_toggled = false
+
+[node name="Spikes15" parent="Spikes2" index="14" instance=ExtResource( 4 )]
+position = Vector2( 345, 280 )
+can_be_toggled = false
+
+[node name="Player" parent="." index="9"]
+position = Vector2( 118, 259 )
+
+[node name="EndPoint" parent="." index="12"]
+position = Vector2( 621, 224 )
+
+[editable path="Wall1/PhaseInHitbox"]
+[editable path="GoldBlock1/PhaseInHitbox"]
+[editable path="GoldBlock3/PhaseInHitbox"]
