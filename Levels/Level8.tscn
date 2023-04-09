@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilemaps/GrassTerrainTileMap.tscn" type="PackedScene" id=2]
@@ -206,11 +206,8 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 31, 64 )
 
-[sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 31, 15 )
-
-[sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 31, 15 )
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 16, 63 )
 
 [node name="Level8" instance=ExtResource( 1 )]
 
@@ -290,124 +287,56 @@ position = Vector2( 414, 238 )
 [node name="NitroCrate9" parent="Nitro2" index="8" instance=ExtResource( 3 )]
 position = Vector2( 434, 238 )
 
-[node name="GoldBlock1" type="Node2D" parent="." index="5"]
-position = Vector2( 493, 256 )
+[node name="GoldBlock3" type="Node2D" parent="." index="5"]
+position = Vector2( 541, 256 )
 script = ExtResource( 7 )
-path_to_tilemap = NodePath("GoldTerrainTileMap")
-
-[node name="GoldTerrainTileMap" parent="GoldBlock1" index="0" instance=ExtResource( 5 )]
-tile_data = PoolIntArray( 65534, 4, 0, 0, 4, 0 )
-
-[node name="PhaseInHitbox" parent="GoldBlock1" index="1" instance=ExtResource( 8 )]
-
-[node name="CollisionShape2D" parent="GoldBlock1/PhaseInHitbox" index="0"]
-position = Vector2( 0, 16 )
-shape = SubResource( 11 )
-
-[node name="Nitro3" type="Node2D" parent="." index="6"]
-position = Vector2( 136, 0 )
-
-[node name="NitroCrate" parent="Nitro3" index="0" instance=ExtResource( 3 )]
-position = Vector2( 414, 238 )
-
-[node name="NitroCrate2" parent="Nitro3" index="1" instance=ExtResource( 3 )]
-position = Vector2( 414, 278 )
-
-[node name="NitroCrate3" parent="Nitro3" index="2" instance=ExtResource( 3 )]
-position = Vector2( 414, 218 )
-
-[node name="NitroCrate4" parent="Nitro3" index="3" instance=ExtResource( 3 )]
-position = Vector2( 414, 198 )
-
-[node name="NitroCrate5" parent="Nitro3" index="4" instance=ExtResource( 3 )]
-position = Vector2( 414, 258 )
-
-[node name="NitroCrate6" parent="Nitro3" index="5" instance=ExtResource( 3 )]
-position = Vector2( 414, 178 )
-
-[node name="GoldBlock3" type="Node2D" parent="." index="7"]
-position = Vector2( 576, 256 )
-script = ExtResource( 7 )
+phased_in = false
 path_to_tilemap = NodePath("GoldTerrainTileMap")
 
 [node name="GoldTerrainTileMap" parent="GoldBlock3" index="0" instance=ExtResource( 5 )]
-tile_data = PoolIntArray( 0, 4, 0, 2, 4, 0 )
+tile_data = PoolIntArray( -327682, 4, 0, -196610, 4, 0, -65538, 4, 0, 65534, 4, 0 )
 
 [node name="PhaseInHitbox" parent="GoldBlock3" index="1" instance=ExtResource( 8 )]
 
 [node name="CollisionShape2D" parent="GoldBlock3/PhaseInHitbox" index="0"]
-position = Vector2( 32, 16 )
-shape = SubResource( 13 )
+position = Vector2( -16, -32 )
+shape = SubResource( 12 )
 
-[node name="Spikes2" type="Node2D" parent="." index="8"]
+[node name="Spikes2" type="Node2D" parent="." index="6"]
 position = Vector2( 284, 0 )
 
-[node name="Spikes" parent="Spikes2" index="0" instance=ExtResource( 4 )]
-position = Vector2( 185, 280 )
-can_be_toggled = false
-
-[node name="Spikes2" parent="Spikes2" index="1" instance=ExtResource( 4 )]
-position = Vector2( 201, 280 )
-can_be_toggled = false
-
-[node name="Spikes3" parent="Spikes2" index="2" instance=ExtResource( 4 )]
-position = Vector2( 217, 280 )
-can_be_toggled = false
-
-[node name="Spikes4" parent="Spikes2" index="3" instance=ExtResource( 4 )]
-position = Vector2( 233, 280 )
-can_be_toggled = false
-
-[node name="Spikes5" parent="Spikes2" index="4" instance=ExtResource( 4 )]
-position = Vector2( 249, 280 )
-can_be_toggled = false
-
-[node name="Spikes6" parent="Spikes2" index="5" instance=ExtResource( 4 )]
+[node name="Spikes6" parent="Spikes2" index="0" instance=ExtResource( 4 )]
 position = Vector2( 265, 280 )
-can_be_toggled = false
 
-[node name="Spikes7" parent="Spikes2" index="6" instance=ExtResource( 4 )]
+[node name="Spikes7" parent="Spikes2" index="1" instance=ExtResource( 4 )]
 position = Vector2( 281, 280 )
-can_be_toggled = false
 
-[node name="Spikes8" parent="Spikes2" index="7" instance=ExtResource( 4 )]
+[node name="Spikes8" parent="Spikes2" index="2" instance=ExtResource( 4 )]
 position = Vector2( 297, 280 )
-can_be_toggled = false
 
-[node name="Spikes9" parent="Spikes2" index="8" instance=ExtResource( 4 )]
-position = Vector2( 249, 280 )
-can_be_toggled = false
-
-[node name="Spikes10" parent="Spikes2" index="9" instance=ExtResource( 4 )]
+[node name="Spikes10" parent="Spikes2" index="3" instance=ExtResource( 4 )]
 position = Vector2( 265, 280 )
-can_be_toggled = false
 
-[node name="Spikes11" parent="Spikes2" index="10" instance=ExtResource( 4 )]
+[node name="Spikes11" parent="Spikes2" index="4" instance=ExtResource( 4 )]
 position = Vector2( 281, 280 )
-can_be_toggled = false
 
-[node name="Spikes12" parent="Spikes2" index="11" instance=ExtResource( 4 )]
+[node name="Spikes12" parent="Spikes2" index="5" instance=ExtResource( 4 )]
 position = Vector2( 297, 280 )
-can_be_toggled = false
 
-[node name="Spikes13" parent="Spikes2" index="12" instance=ExtResource( 4 )]
+[node name="Spikes13" parent="Spikes2" index="6" instance=ExtResource( 4 )]
 position = Vector2( 313, 280 )
-can_be_toggled = false
 
-[node name="Spikes14" parent="Spikes2" index="13" instance=ExtResource( 4 )]
-position = Vector2( 329, 280 )
-can_be_toggled = false
-
-[node name="Spikes15" parent="Spikes2" index="14" instance=ExtResource( 4 )]
-position = Vector2( 345, 280 )
-can_be_toggled = false
-
-[node name="Player" parent="." index="9"]
+[node name="Player" parent="." index="7"]
 position = Vector2( 118, 259 )
 
-[node name="EndPoint" parent="." index="12"]
-position = Vector2( 621, 224 )
+[node name="RegularBackground" parent="Background" index="0"]
+margin_bottom = -277.0
+
+[node name="RegularBackground3" parent="Background" index="1"]
+margin_top = 304.0
+
+[node name="EndPoint" parent="." index="10"]
+position = Vector2( 623, 256 )
 
 [editable path="Wall1/PhaseInHitbox"]
-[editable path="GoldBlock1/PhaseInHitbox"]
 [editable path="GoldBlock3/PhaseInHitbox"]
