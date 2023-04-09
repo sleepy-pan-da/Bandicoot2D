@@ -629,34 +629,43 @@ position = Vector2( 80, 0 )
 
 [node name="NitroCrate" parent="Crates/Nitro" index="0" instance=ExtResource( 5 )]
 position = Vector2( 250, 246 )
+can_be_toggled = false
 
 [node name="NitroCrate2" parent="Crates/Nitro" index="1" instance=ExtResource( 5 )]
 position = Vector2( 270, 246 )
+can_be_toggled = false
 
 [node name="NitroCrate3" parent="Crates/Nitro" index="2" instance=ExtResource( 5 )]
 position = Vector2( 290, 246 )
+can_be_toggled = false
 
 [node name="NitroCrate4" parent="Crates/Nitro" index="3" instance=ExtResource( 5 )]
 position = Vector2( 310, 246 )
+can_be_toggled = false
 
 [node name="Basic" type="Node2D" parent="Crates" index="1"]
 
 [node name="BasicCrate" parent="Crates/Basic" index="0" instance=ExtResource( 6 )]
 position = Vector2( 250, 226 )
+can_be_toggled = false
 
 [node name="BasicCrate2" parent="Crates/Basic" index="1" instance=ExtResource( 6 )]
 position = Vector2( 270, 226 )
+can_be_toggled = false
 
 [node name="BasicCrate3" parent="Crates/Basic" index="2" instance=ExtResource( 6 )]
 position = Vector2( 290, 226 )
+can_be_toggled = false
 
 [node name="Bounce" type="Node2D" parent="Crates" index="2"]
 
 [node name="BounceCrate" parent="Crates/Bounce" index="0" instance=ExtResource( 7 )]
 position = Vector2( 310, 226 )
+can_be_toggled = false
 
 [node name="BounceCrate2" parent="Crates/Bounce" index="1" instance=ExtResource( 7 )]
 position = Vector2( 310, 138 )
+can_be_toggled = false
 
 [node name="Player" parent="." index="3"]
 position = Vector2( 274, 196 )

@@ -12,6 +12,7 @@ var physics_body : Node2D = self
 # tilemap terrain
 # terrain
 # damages player
+# crates
 
 # Might need to refactor this if it gets out of hand
 
@@ -33,6 +34,7 @@ func update() -> void:
 
 	if !phase_in_hitbox:
 		# NITRO
+		physics_body.set_collision_layer_bit(4, phased_in)
 		physics_body.set_collision_mask_bit(2, phased_in)
 		return
 
