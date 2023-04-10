@@ -6,7 +6,6 @@ onready var animated_sprite = $AnimatedSprite
 var breaking : bool = false
 
 func _on_NitroCrate_body_entered(_body : Node) -> void:
-	print(_body.name)
 	hit_crate()
 
 
