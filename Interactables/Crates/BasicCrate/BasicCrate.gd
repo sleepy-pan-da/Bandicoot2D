@@ -1,7 +1,7 @@
 extends TogglePhase
 class_name BasicCrate
 
-const BOX_BOUNCE_POWER = -250
+const BOX_BOUNCE_POWER = -300#-250
 
 export(Array, PackedScene) var broken_particles
 export(PackedScene) var fruit
