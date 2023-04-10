@@ -66,10 +66,13 @@ func spill_out_fruit() -> void:
 	var spilled_fruit = fruit.instance()
 	get_parent().add_child(spilled_fruit)
 	spilled_fruit.global_position = global_position
+
+	if last_hit_from == HitFrom.BOTTOM: spilled_fruit.global_position.y -= 10
+	
 	if last_hit_from == HitFrom.TOP:
-		spilled_fruit.apply_central_impulse(Vector2(0, -300))
+		spilled_fruit.apply_central_impulse(Vector2(0, -350))
 	else:
-		spilled_fruit.apply_central_impulse(Vector2(0, 100))
+		spilled_fruit.apply_central_impulse(Vector2(0, 0))
 
 
 
