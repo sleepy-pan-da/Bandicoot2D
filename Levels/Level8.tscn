@@ -206,7 +206,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 31, 64 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 16, 63 )
 
 [node name="Level8" instance=ExtResource( 1 )]
@@ -300,7 +300,7 @@ tile_data = PoolIntArray( -327682, 4, 0, -196610, 4, 0, -65538, 4, 0, 65534, 4, 
 
 [node name="CollisionShape2D" parent="GoldBlock3/PhaseInHitbox" index="0"]
 position = Vector2( -16, -32 )
-shape = SubResource( 12 )
+shape = SubResource( 11 )
 
 [node name="Spikes2" type="Node2D" parent="." index="6"]
 position = Vector2( 284, 0 )
@@ -325,6 +325,12 @@ position = Vector2( 297, 280 )
 
 [node name="Spikes13" parent="Spikes2" index="6" instance=ExtResource( 4 )]
 position = Vector2( 313, 280 )
+
+[node name="Spikes14" parent="Spikes2" index="7" instance=ExtResource( 4 )]
+position = Vector2( 329, 280 )
+
+[node name="Spikes15" parent="Spikes2" index="8" instance=ExtResource( 4 )]
+position = Vector2( 345, 280 )
 
 [node name="Player" parent="." index="7"]
 position = Vector2( 118, 259 )
