@@ -36,6 +36,7 @@ func _on_BtmArea_body_entered(body) -> void:
 
 
 func hit_crate() -> void:
+	AudioManager.playSfx("HitCrate")
 	breaking = true
 	animated_sprite.play("Breaking")
 
@@ -48,6 +49,7 @@ func _on_AnimatedSprite_animation_finished() -> void:
 
 
 func break_into_pieces() -> void:
+	AudioManager.playSfx("BreakCrate")
 	var particles = []
 	for particle in broken_particles:
 		particles.append(particle.instance())

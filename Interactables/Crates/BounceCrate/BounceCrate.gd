@@ -4,6 +4,7 @@ var hits_left : int = 5
 
 # override func in BasicCrate
 func hit_crate() -> void:
+	AudioManager.playSfx("HitCrate")
 	hits_left -= 1
 	breaking = true
 	animated_sprite.play("Breaking")

@@ -16,7 +16,7 @@ func playSfx(soundName : String) -> void:
 
 
 func playTheme() -> void:
-	var audio : AudioStreamPlayer = music.get_node("Theme")
+	var audio : AudioStreamPlayer = music.get_node_or_null("Theme")
 	if not audio:
 		print("Audio {soundName} not found".format({"soundName": "Theme"}))
 		return

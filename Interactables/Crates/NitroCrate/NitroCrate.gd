@@ -10,6 +10,7 @@ func _on_NitroCrate_body_entered(_body : Node) -> void:
 
 
 func hit_crate() -> void:
+	AudioManager.playSfx("HitCrate")
 	breaking = true
 	animated_sprite.play("Breaking")
 
@@ -22,6 +23,7 @@ func _on_AnimatedSprite_animation_finished() -> void:
 
 
 func break_into_pieces() -> void:
+	# AudioManager.playSfx("BreakCrate")
 	var particles = []
 	for particle in broken_particles:
 		particles.append(particle.instance())
@@ -42,6 +44,7 @@ func get_rand_int_between(start_val : int, end_val : int) -> int:
 
 
 func create_explosion() -> void:
+	AudioManager.playSfx("Explosion")
 	var cur_explosion = explosion.instance()
 	get_parent().add_child(cur_explosion)
 	cur_explosion.global_position = global_position
