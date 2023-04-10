@@ -1,87 +1,84 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilemaps/GrassTerrainTileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" type="Texture" id=3]
-[ext_resource path="res://Phase/PhaseInHitbox/PhaseInHitbox.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Tilemaps/SulfurTerrainTileMap.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Phase/TogglePhase.gd" type="Script" id=6]
-[ext_resource path="res://Interactables/Crates/NitroCrate/NitroCrate.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Interactables/Crates/BasicCrate/BasicCrate.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Interactables/Crates/NitroCrate/NitroCrate.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Interactables/Crates/BounceCrate/BounceCrate.tscn" type="PackedScene" id=5]
 
-[sub_resource type="ConvexPolygonShape2D" id=28]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=29]
+[sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=30]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=31]
+[sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=32]
+[sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=33]
+[sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=34]
+[sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=35]
+[sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=36]
+[sub_resource type="ConvexPolygonShape2D" id=9]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=37]
+[sub_resource type="ConvexPolygonShape2D" id=10]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=38]
+[sub_resource type="ConvexPolygonShape2D" id=11]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=39]
+[sub_resource type="ConvexPolygonShape2D" id=12]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=40]
+[sub_resource type="ConvexPolygonShape2D" id=13]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=41]
+[sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=42]
+[sub_resource type="ConvexPolygonShape2D" id=15]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=43]
+[sub_resource type="ConvexPolygonShape2D" id=16]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=44]
+[sub_resource type="ConvexPolygonShape2D" id=17]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=45]
+[sub_resource type="ConvexPolygonShape2D" id=18]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=46]
+[sub_resource type="ConvexPolygonShape2D" id=19]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=47]
+[sub_resource type="ConvexPolygonShape2D" id=20]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=48]
+[sub_resource type="ConvexPolygonShape2D" id=21]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=49]
+[sub_resource type="ConvexPolygonShape2D" id=22]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=50]
+[sub_resource type="ConvexPolygonShape2D" id=23]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=51]
+[sub_resource type="ConvexPolygonShape2D" id=24]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=52]
+[sub_resource type="ConvexPolygonShape2D" id=25]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="TileSet" id=26]
@@ -95,14 +92,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 28 )
+0/shape = SubResource( 1 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 28 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -116,14 +113,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 29 )
+1/shape = SubResource( 2 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 29 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
@@ -137,14 +134,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 2/navigation_offset = Vector2( 0, 0 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 40 )
+2/shape = SubResource( 13 )
 2/shape_one_way = false
 2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 40 ),
+"shape": SubResource( 13 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
@@ -158,14 +155,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 3/navigation_offset = Vector2( 0, 0 )
 3/shape_offset = Vector2( 0, 0 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 46 )
+3/shape = SubResource( 19 )
 3/shape_one_way = false
 3/shape_one_way_margin = 1.0
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 46 ),
+"shape": SubResource( 19 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 3/z_index = 0
@@ -179,14 +176,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 4/navigation_offset = Vector2( 0, 0 )
 4/shape_offset = Vector2( 0, 0 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 47 )
+4/shape = SubResource( 20 )
 4/shape_one_way = false
 4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 47 ),
+"shape": SubResource( 20 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/z_index = 0
@@ -200,14 +197,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 5/navigation_offset = Vector2( 0, 0 )
 5/shape_offset = Vector2( 0, 0 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 48 )
+5/shape = SubResource( 21 )
 5/shape_one_way = false
 5/shape_one_way_margin = 1.0
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 48 ),
+"shape": SubResource( 21 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 5/z_index = 0
@@ -221,14 +218,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 0, 0 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape = SubResource( 49 )
+6/shape = SubResource( 22 )
 6/shape_one_way = false
 6/shape_one_way_margin = 1.0
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 49 ),
+"shape": SubResource( 22 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 6/z_index = 0
@@ -242,14 +239,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 7/navigation_offset = Vector2( 0, 0 )
 7/shape_offset = Vector2( 0, 0 )
 7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape = SubResource( 50 )
+7/shape = SubResource( 23 )
 7/shape_one_way = false
 7/shape_one_way_margin = 1.0
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 50 ),
+"shape": SubResource( 23 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 7/z_index = 0
@@ -263,14 +260,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 8/navigation_offset = Vector2( 0, 0 )
 8/shape_offset = Vector2( 0, 0 )
 8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-8/shape = SubResource( 51 )
+8/shape = SubResource( 24 )
 8/shape_one_way = false
 8/shape_one_way_margin = 1.0
 8/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 51 ),
+"shape": SubResource( 24 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 8/z_index = 0
@@ -284,14 +281,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 9/navigation_offset = Vector2( 0, 0 )
 9/shape_offset = Vector2( 0, 0 )
 9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape = SubResource( 52 )
+9/shape = SubResource( 25 )
 9/shape_one_way = false
 9/shape_one_way_margin = 1.0
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 52 ),
+"shape": SubResource( 25 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 9/z_index = 0
@@ -305,14 +302,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 10/navigation_offset = Vector2( 0, 0 )
 10/shape_offset = Vector2( 0, 0 )
 10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-10/shape = SubResource( 30 )
+10/shape = SubResource( 3 )
 10/shape_one_way = false
 10/shape_one_way_margin = 1.0
 10/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 30 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 10/z_index = 0
@@ -326,14 +323,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 11/navigation_offset = Vector2( 0, 0 )
 11/shape_offset = Vector2( 0, 0 )
 11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-11/shape = SubResource( 31 )
+11/shape = SubResource( 4 )
 11/shape_one_way = false
 11/shape_one_way_margin = 1.0
 11/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 31 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 11/z_index = 0
@@ -347,14 +344,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 12/navigation_offset = Vector2( 0, 0 )
 12/shape_offset = Vector2( 0, 0 )
 12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-12/shape = SubResource( 32 )
+12/shape = SubResource( 5 )
 12/shape_one_way = false
 12/shape_one_way_margin = 1.0
 12/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 32 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 12/z_index = 0
@@ -368,14 +365,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 13/navigation_offset = Vector2( 0, 0 )
 13/shape_offset = Vector2( 0, 0 )
 13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-13/shape = SubResource( 33 )
+13/shape = SubResource( 6 )
 13/shape_one_way = false
 13/shape_one_way_margin = 1.0
 13/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 33 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 13/z_index = 0
@@ -389,14 +386,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 14/navigation_offset = Vector2( 0, 0 )
 14/shape_offset = Vector2( 0, 0 )
 14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-14/shape = SubResource( 34 )
+14/shape = SubResource( 7 )
 14/shape_one_way = false
 14/shape_one_way_margin = 1.0
 14/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 34 ),
+"shape": SubResource( 7 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 14/z_index = 0
@@ -410,14 +407,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 15/navigation_offset = Vector2( 0, 0 )
 15/shape_offset = Vector2( 0, 0 )
 15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-15/shape = SubResource( 35 )
+15/shape = SubResource( 8 )
 15/shape_one_way = false
 15/shape_one_way_margin = 1.0
 15/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 35 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 15/z_index = 0
@@ -431,14 +428,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 16/navigation_offset = Vector2( 0, 0 )
 16/shape_offset = Vector2( 0, 0 )
 16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-16/shape = SubResource( 36 )
+16/shape = SubResource( 9 )
 16/shape_one_way = false
 16/shape_one_way_margin = 1.0
 16/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 36 ),
+"shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 16/z_index = 0
@@ -452,14 +449,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 17/navigation_offset = Vector2( 0, 0 )
 17/shape_offset = Vector2( 0, 0 )
 17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-17/shape = SubResource( 37 )
+17/shape = SubResource( 10 )
 17/shape_one_way = false
 17/shape_one_way_margin = 1.0
 17/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 37 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 17/z_index = 0
@@ -473,14 +470,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 18/navigation_offset = Vector2( 0, 0 )
 18/shape_offset = Vector2( 0, 0 )
 18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-18/shape = SubResource( 38 )
+18/shape = SubResource( 11 )
 18/shape_one_way = false
 18/shape_one_way_margin = 1.0
 18/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 38 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 18/z_index = 0
@@ -494,14 +491,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 19/navigation_offset = Vector2( 0, 0 )
 19/shape_offset = Vector2( 0, 0 )
 19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-19/shape = SubResource( 39 )
+19/shape = SubResource( 12 )
 19/shape_one_way = false
 19/shape_one_way_margin = 1.0
 19/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 39 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 19/z_index = 0
@@ -515,14 +512,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 20/navigation_offset = Vector2( 0, 0 )
 20/shape_offset = Vector2( 0, 0 )
 20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-20/shape = SubResource( 41 )
+20/shape = SubResource( 14 )
 20/shape_one_way = false
 20/shape_one_way_margin = 1.0
 20/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 41 ),
+"shape": SubResource( 14 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 20/z_index = 0
@@ -536,14 +533,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 21/navigation_offset = Vector2( 0, 0 )
 21/shape_offset = Vector2( 0, 0 )
 21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-21/shape = SubResource( 42 )
+21/shape = SubResource( 15 )
 21/shape_one_way = false
 21/shape_one_way_margin = 1.0
 21/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 42 ),
+"shape": SubResource( 15 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 21/z_index = 0
@@ -557,14 +554,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 22/navigation_offset = Vector2( 0, 0 )
 22/shape_offset = Vector2( 0, 0 )
 22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-22/shape = SubResource( 43 )
+22/shape = SubResource( 16 )
 22/shape_one_way = false
 22/shape_one_way_margin = 1.0
 22/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 43 ),
+"shape": SubResource( 16 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 22/z_index = 0
@@ -578,14 +575,14 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 23/navigation_offset = Vector2( 0, 0 )
 23/shape_offset = Vector2( 0, 0 )
 23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-23/shape = SubResource( 44 )
+23/shape = SubResource( 17 )
 23/shape_one_way = false
 23/shape_one_way_margin = 1.0
 23/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 44 ),
+"shape": SubResource( 17 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 23/z_index = 0
@@ -599,229 +596,221 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 24/navigation_offset = Vector2( 0, 0 )
 24/shape_offset = Vector2( 0, 0 )
 24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-24/shape = SubResource( 45 )
+24/shape = SubResource( 18 )
 24/shape_one_way = false
 24/shape_one_way_margin = 1.0
 24/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 45 ),
+"shape": SubResource( 18 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 24/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=27]
-extents = Vector2( 80, 8 )
-
-[node name="Level12" instance=ExtResource( 1 )]
-fruits_left = 16
+[node name="Level13" instance=ExtResource( 1 )]
+fruits_left = 20
 
 [node name="GrassTerrainTileMap" parent="Terrain" index="0" instance=ExtResource( 2 )]
 tile_set = SubResource( 26 )
-tile_data = PoolIntArray( 196625, 8, 0, 196626, 6, 0, 196627, 6, 0, 196628, 6, 0, 196629, 6, 0, 196630, 6, 0, 196631, 6, 0, 196632, 6, 0, 196633, 6, 0, 196634, 6, 0, 196635, 6, 0, 196636, 9, 0, 262161, 4, 0, 262172, 3, 0, 327697, 4, 0, 327708, 3, 0, 393233, 4, 0, 393244, 3, 0, 458769, 4, 0, 458780, 3, 0, 524305, 4, 0, 524316, 3, 0, 589841, 4, 0, 589852, 3, 0, 655377, 4, 0, 655388, 3, 0, 720913, 4, 0, 720924, 3, 0, 786449, 4, 0, 786460, 3, 0, 851985, 4, 0, 851996, 3, 0, 917521, 4, 0, 917532, 3, 0, 983057, 4, 0, 983068, 3, 0, 1048593, 4, 0, 1048604, 3, 0, 1114129, 4, 0, 1114140, 3, 0, 1179665, 4, 0, 1179676, 3, 0, 1245201, 4, 0, 1245212, 3, 0, 1310737, 4, 0, 1310748, 3, 0, 1376273, 4, 0, 1376284, 3, 0, 1441809, 4, 0, 1441820, 3, 0, 1507345, 10, 0, 1507346, 1, 0, 1507347, 1, 0, 1507348, 1, 0, 1507349, 1, 0, 1507350, 1, 0, 1507351, 1, 0, 1507352, 1, 0, 1507353, 1, 0, 1507354, 1, 0, 1507355, 1, 0, 1507356, 11, 0 )
+tile_data = PoolIntArray( 458769, 8, 0, 458770, 6, 0, 458771, 6, 0, 458772, 6, 0, 458773, 6, 0, 458774, 6, 0, 458775, 6, 0, 458776, 6, 0, 458777, 6, 0, 458778, 6, 0, 458779, 6, 0, 458780, 9, 0, 524305, 4, 0, 524316, 3, 0, 589841, 4, 0, 589852, 3, 0, 655377, 4, 0, 655388, 3, 0, 720913, 4, 0, 720924, 3, 0, 786449, 4, 0, 786460, 3, 0, 851985, 4, 0, 851996, 3, 0, 917517, 8, 0, 917518, 6, 0, 917519, 6, 0, 917520, 6, 0, 917521, 7, 0, 917532, 3, 0, 983053, 4, 0, 983068, 3, 0, 1048589, 4, 0, 1048604, 3, 0, 1114125, 4, 0, 1114140, 3, 0, 1179661, 10, 0, 1179662, 1, 0, 1179663, 1, 0, 1179664, 1, 0, 1179665, 1, 0, 1179666, 1, 0, 1179667, 1, 0, 1179668, 1, 0, 1179669, 1, 0, 1179670, 1, 0, 1179671, 1, 0, 1179672, 1, 0, 1179673, 1, 0, 1179674, 1, 0, 1179675, 1, 0, 1179676, 11, 0 )
 
-[node name="Row1" type="Node2D" parent="." index="1"]
-script = ExtResource( 6 )
-path_to_tilemap = NodePath("SulfurTerrainTileMap")
+[node name="OuterNitro" type="Node2D" parent="." index="1"]
 
-[node name="SulfurTerrainTileMap" parent="Row1" index="0" instance=ExtResource( 5 )]
-tile_data = PoolIntArray( 458770, 3, 0, 458771, 3, 0, 458772, 3, 0, 458773, 3, 0, 458774, 3, 0, 458775, 3, 0, 458776, 3, 0, 458777, 3, 0, 458778, 3, 0, 458779, 3, 0 )
+[node name="NitroCrate" parent="OuterNitro" index="0" instance=ExtResource( 4 )]
+position = Vector2( 298, 278 )
 
-[node name="PhaseInHitbox" parent="Row1" index="1" instance=ExtResource( 4 )]
-position = Vector2( 368, 121 )
+[node name="NitroCrate2" parent="OuterNitro" index="1" instance=ExtResource( 4 )]
+position = Vector2( 298, 258 )
 
-[node name="CollisionShape2D" parent="Row1/PhaseInHitbox" index="0"]
-position = Vector2( 0, -1 )
-shape = SubResource( 27 )
+[node name="NitroCrate3" parent="OuterNitro" index="2" instance=ExtResource( 4 )]
+position = Vector2( 298, 238 )
 
-[node name="CrateRow1" type="Node2D" parent="." index="2"]
-position = Vector2( 0, 16 )
+[node name="NitroCrate4" parent="OuterNitro" index="3" instance=ExtResource( 4 )]
+position = Vector2( 298, 218 )
 
-[node name="BasicCrate" parent="CrateRow1" index="0" instance=ExtResource( 8 )]
-position = Vector2( 298, 178 )
-phased_in = false
-
-[node name="BasicCrate2" parent="CrateRow1" index="1" instance=ExtResource( 8 )]
-position = Vector2( 318, 178 )
-phased_in = false
-
-[node name="BasicCrate3" parent="CrateRow1" index="2" instance=ExtResource( 8 )]
-position = Vector2( 338, 178 )
-phased_in = false
-
-[node name="BasicCrate4" parent="CrateRow1" index="3" instance=ExtResource( 8 )]
-position = Vector2( 358, 178 )
-phased_in = false
-
-[node name="BasicCrate5" parent="CrateRow1" index="4" instance=ExtResource( 8 )]
-position = Vector2( 378, 178 )
-phased_in = false
-
-[node name="BasicCrate6" parent="CrateRow1" index="5" instance=ExtResource( 8 )]
-position = Vector2( 398, 178 )
-phased_in = false
-
-[node name="BasicCrate7" parent="CrateRow1" index="6" instance=ExtResource( 8 )]
-position = Vector2( 418, 178 )
-phased_in = false
-
-[node name="BasicCrate8" parent="CrateRow1" index="7" instance=ExtResource( 8 )]
-position = Vector2( 438, 178 )
-phased_in = false
-
-[node name="NitroRow1" type="Node2D" parent="." index="3"]
-position = Vector2( 0, 16 )
-
-[node name="NitroCrate" parent="NitroRow1" index="0" instance=ExtResource( 7 )]
-position = Vector2( 298, 198 )
-phased_in = false
-
-[node name="NitroCrate2" parent="NitroRow1" index="1" instance=ExtResource( 7 )]
-position = Vector2( 318, 198 )
-phased_in = false
-
-[node name="NitroCrate3" parent="NitroRow1" index="2" instance=ExtResource( 7 )]
-position = Vector2( 338, 198 )
-phased_in = false
-
-[node name="NitroCrate4" parent="NitroRow1" index="3" instance=ExtResource( 7 )]
-position = Vector2( 358, 198 )
-phased_in = false
-
-[node name="NitroCrate5" parent="NitroRow1" index="4" instance=ExtResource( 7 )]
-position = Vector2( 378, 198 )
-phased_in = false
-
-[node name="NitroCrate6" parent="NitroRow1" index="5" instance=ExtResource( 7 )]
-position = Vector2( 398, 198 )
-phased_in = false
-
-[node name="NitroCrate7" parent="NitroRow1" index="6" instance=ExtResource( 7 )]
-position = Vector2( 418, 198 )
-phased_in = false
-
-[node name="NitroCrate8" parent="NitroRow1" index="7" instance=ExtResource( 7 )]
-position = Vector2( 438, 198 )
-phased_in = false
-
-[node name="CrateRow2" type="Node2D" parent="." index="4"]
-position = Vector2( 0, 56 )
-
-[node name="BasicCrate" parent="CrateRow2" index="0" instance=ExtResource( 8 )]
-position = Vector2( 298, 178 )
-
-[node name="BasicCrate2" parent="CrateRow2" index="1" instance=ExtResource( 8 )]
-position = Vector2( 318, 178 )
-
-[node name="BasicCrate3" parent="CrateRow2" index="2" instance=ExtResource( 8 )]
-position = Vector2( 338, 178 )
-
-[node name="BasicCrate4" parent="CrateRow2" index="3" instance=ExtResource( 8 )]
-position = Vector2( 358, 178 )
-
-[node name="BasicCrate5" parent="CrateRow2" index="4" instance=ExtResource( 8 )]
-position = Vector2( 378, 178 )
-
-[node name="BasicCrate6" parent="CrateRow2" index="5" instance=ExtResource( 8 )]
-position = Vector2( 398, 178 )
-
-[node name="BasicCrate7" parent="CrateRow2" index="6" instance=ExtResource( 8 )]
-position = Vector2( 418, 178 )
-
-[node name="BasicCrate8" parent="CrateRow2" index="7" instance=ExtResource( 8 )]
-position = Vector2( 438, 178 )
-
-[node name="NitroRow2" type="Node2D" parent="." index="5"]
-position = Vector2( 0, 160 )
-
-[node name="NitroCrate" parent="NitroRow2" index="0" instance=ExtResource( 7 )]
+[node name="NitroCrate5" parent="OuterNitro" index="4" instance=ExtResource( 4 )]
 position = Vector2( 298, 198 )
 
-[node name="NitroCrate2" parent="NitroRow2" index="1" instance=ExtResource( 7 )]
-position = Vector2( 318, 198 )
-
-[node name="NitroCrate3" parent="NitroRow2" index="2" instance=ExtResource( 7 )]
-position = Vector2( 338, 198 )
-
-[node name="NitroCrate4" parent="NitroRow2" index="3" instance=ExtResource( 7 )]
-position = Vector2( 358, 198 )
-
-[node name="NitroCrate5" parent="NitroRow2" index="4" instance=ExtResource( 7 )]
-position = Vector2( 378, 198 )
-
-[node name="NitroCrate6" parent="NitroRow2" index="5" instance=ExtResource( 7 )]
-position = Vector2( 398, 198 )
-
-[node name="NitroCrate7" parent="NitroRow2" index="6" instance=ExtResource( 7 )]
-position = Vector2( 418, 198 )
-
-[node name="NitroCrate8" parent="NitroRow2" index="7" instance=ExtResource( 7 )]
-position = Vector2( 438, 198 )
-
-[node name="NitroCrate9" parent="NitroRow2" index="8" instance=ExtResource( 7 )]
+[node name="NitroCrate6" parent="OuterNitro" index="5" instance=ExtResource( 4 )]
 position = Vector2( 298, 178 )
 
-[node name="NitroCrate10" parent="NitroRow2" index="9" instance=ExtResource( 7 )]
-position = Vector2( 318, 178 )
-
-[node name="NitroCrate11" parent="NitroRow2" index="10" instance=ExtResource( 7 )]
-position = Vector2( 338, 178 )
-
-[node name="NitroCrate12" parent="NitroRow2" index="11" instance=ExtResource( 7 )]
-position = Vector2( 358, 178 )
-
-[node name="NitroCrate13" parent="NitroRow2" index="12" instance=ExtResource( 7 )]
-position = Vector2( 378, 178 )
-
-[node name="NitroCrate14" parent="NitroRow2" index="13" instance=ExtResource( 7 )]
-position = Vector2( 398, 178 )
-
-[node name="NitroCrate15" parent="NitroRow2" index="14" instance=ExtResource( 7 )]
-position = Vector2( 418, 178 )
-
-[node name="NitroCrate16" parent="NitroRow2" index="15" instance=ExtResource( 7 )]
-position = Vector2( 438, 178 )
-
-[node name="NitroCrate17" parent="NitroRow2" index="16" instance=ExtResource( 7 )]
+[node name="NitroCrate7" parent="OuterNitro" index="6" instance=ExtResource( 4 )]
 position = Vector2( 298, 158 )
 
-[node name="NitroCrate18" parent="NitroRow2" index="17" instance=ExtResource( 7 )]
-position = Vector2( 318, 158 )
+[node name="NitroCrate16" parent="OuterNitro" index="7" instance=ExtResource( 4 )]
+position = Vector2( 438, 278 )
 
-[node name="NitroCrate19" parent="NitroRow2" index="18" instance=ExtResource( 7 )]
-position = Vector2( 338, 158 )
+[node name="NitroCrate17" parent="OuterNitro" index="8" instance=ExtResource( 4 )]
+position = Vector2( 438, 258 )
 
-[node name="NitroCrate20" parent="NitroRow2" index="19" instance=ExtResource( 7 )]
-position = Vector2( 358, 158 )
+[node name="NitroCrate18" parent="OuterNitro" index="9" instance=ExtResource( 4 )]
+position = Vector2( 438, 238 )
 
-[node name="NitroCrate21" parent="NitroRow2" index="20" instance=ExtResource( 7 )]
-position = Vector2( 378, 158 )
+[node name="NitroCrate19" parent="OuterNitro" index="10" instance=ExtResource( 4 )]
+position = Vector2( 438, 218 )
 
-[node name="NitroCrate22" parent="NitroRow2" index="21" instance=ExtResource( 7 )]
-position = Vector2( 398, 158 )
+[node name="NitroCrate20" parent="OuterNitro" index="11" instance=ExtResource( 4 )]
+position = Vector2( 438, 198 )
 
-[node name="NitroCrate23" parent="NitroRow2" index="22" instance=ExtResource( 7 )]
-position = Vector2( 418, 158 )
+[node name="NitroCrate21" parent="OuterNitro" index="12" instance=ExtResource( 4 )]
+position = Vector2( 438, 178 )
 
-[node name="NitroCrate24" parent="NitroRow2" index="23" instance=ExtResource( 7 )]
+[node name="NitroCrate22" parent="OuterNitro" index="13" instance=ExtResource( 4 )]
 position = Vector2( 438, 158 )
 
-[node name="Player" parent="." index="6"]
-position = Vector2( 367, 86 )
+[node name="NitroCrate8" parent="OuterNitro" index="14" instance=ExtResource( 4 )]
+position = Vector2( 298, 138 )
 
-[node name="RegularBackground3" parent="Background" index="1"]
-margin_top = 382.0
+[node name="NitroCrate9" parent="OuterNitro" index="15" instance=ExtResource( 4 )]
+position = Vector2( 318, 138 )
 
-[node name="RegularBackground2" parent="Background" index="2"]
-margin_right = -447.0
-margin_bottom = -22.0
+[node name="NitroCrate10" parent="OuterNitro" index="16" instance=ExtResource( 4 )]
+position = Vector2( 338, 138 )
 
-[node name="RegularBackground4" parent="Background" index="3"]
-margin_left = 464.0
-margin_bottom = -18.0
+[node name="NitroCrate11" parent="OuterNitro" index="17" instance=ExtResource( 4 )]
+position = Vector2( 358, 138 )
 
-[node name="EndPoint" parent="." index="9"]
-position = Vector2( 377, 337 )
+[node name="NitroCrate12" parent="OuterNitro" index="18" instance=ExtResource( 4 )]
+position = Vector2( 378, 138 )
 
-[editable path="Row1/PhaseInHitbox"]
+[node name="NitroCrate13" parent="OuterNitro" index="19" instance=ExtResource( 4 )]
+position = Vector2( 398, 138 )
+
+[node name="NitroCrate14" parent="OuterNitro" index="20" instance=ExtResource( 4 )]
+position = Vector2( 418, 138 )
+
+[node name="NitroCrate23" parent="OuterNitro" index="21" instance=ExtResource( 4 )]
+position = Vector2( 318, 278 )
+
+[node name="NitroCrate24" parent="OuterNitro" index="22" instance=ExtResource( 4 )]
+position = Vector2( 338, 278 )
+
+[node name="NitroCrate29" parent="OuterNitro" index="23" instance=ExtResource( 4 )]
+position = Vector2( 318, 258 )
+
+[node name="NitroCrate30" parent="OuterNitro" index="24" instance=ExtResource( 4 )]
+position = Vector2( 338, 258 )
+
+[node name="NitroCrate31" parent="OuterNitro" index="25" instance=ExtResource( 4 )]
+position = Vector2( 398, 258 )
+
+[node name="NitroCrate32" parent="OuterNitro" index="26" instance=ExtResource( 4 )]
+position = Vector2( 418, 258 )
+
+[node name="NitroCrate25" parent="OuterNitro" index="27" instance=ExtResource( 4 )]
+position = Vector2( 358, 278 )
+
+[node name="NitroCrate26" parent="OuterNitro" index="28" instance=ExtResource( 4 )]
+position = Vector2( 378, 278 )
+
+[node name="NitroCrate27" parent="OuterNitro" index="29" instance=ExtResource( 4 )]
+position = Vector2( 398, 278 )
+
+[node name="NitroCrate28" parent="OuterNitro" index="30" instance=ExtResource( 4 )]
+position = Vector2( 418, 278 )
+
+[node name="NitroCrate15" parent="OuterNitro" index="31" instance=ExtResource( 4 )]
+position = Vector2( 438, 138 )
+
+[node name="InnerNitro" type="Node2D" parent="." index="2"]
+
+[node name="NitroCrate" parent="InnerNitro" index="0" instance=ExtResource( 4 )]
+position = Vector2( 318, 158 )
+phased_in = false
+
+[node name="NitroCrate2" parent="InnerNitro" index="1" instance=ExtResource( 4 )]
+position = Vector2( 318, 178 )
+phased_in = false
+
+[node name="NitroCrate3" parent="InnerNitro" index="2" instance=ExtResource( 4 )]
+position = Vector2( 318, 198 )
+phased_in = false
+
+[node name="NitroCrate4" parent="InnerNitro" index="3" instance=ExtResource( 4 )]
+position = Vector2( 318, 218 )
+phased_in = false
+
+[node name="NitroCrate5" parent="InnerNitro" index="4" instance=ExtResource( 4 )]
+position = Vector2( 318, 238 )
+phased_in = false
+
+[node name="NitroCrate6" parent="InnerNitro" index="5" instance=ExtResource( 4 )]
+position = Vector2( 338, 158 )
+phased_in = false
+
+[node name="NitroCrate7" parent="InnerNitro" index="6" instance=ExtResource( 4 )]
+position = Vector2( 338, 178 )
+phased_in = false
+
+[node name="NitroCrate8" parent="InnerNitro" index="7" instance=ExtResource( 4 )]
+position = Vector2( 338, 198 )
+phased_in = false
+
+[node name="NitroCrate9" parent="InnerNitro" index="8" instance=ExtResource( 4 )]
+position = Vector2( 338, 218 )
+phased_in = false
+
+[node name="NitroCrate10" parent="InnerNitro" index="9" instance=ExtResource( 4 )]
+position = Vector2( 338, 238 )
+phased_in = false
+
+[node name="NitroCrate11" parent="InnerNitro" index="10" instance=ExtResource( 4 )]
+position = Vector2( 398, 158 )
+phased_in = false
+
+[node name="NitroCrate12" parent="InnerNitro" index="11" instance=ExtResource( 4 )]
+position = Vector2( 398, 178 )
+phased_in = false
+
+[node name="NitroCrate13" parent="InnerNitro" index="12" instance=ExtResource( 4 )]
+position = Vector2( 398, 198 )
+phased_in = false
+
+[node name="NitroCrate14" parent="InnerNitro" index="13" instance=ExtResource( 4 )]
+position = Vector2( 398, 218 )
+phased_in = false
+
+[node name="NitroCrate15" parent="InnerNitro" index="14" instance=ExtResource( 4 )]
+position = Vector2( 398, 238 )
+phased_in = false
+
+[node name="NitroCrate16" parent="InnerNitro" index="15" instance=ExtResource( 4 )]
+position = Vector2( 418, 158 )
+phased_in = false
+
+[node name="NitroCrate17" parent="InnerNitro" index="16" instance=ExtResource( 4 )]
+position = Vector2( 418, 178 )
+phased_in = false
+
+[node name="NitroCrate18" parent="InnerNitro" index="17" instance=ExtResource( 4 )]
+position = Vector2( 418, 198 )
+phased_in = false
+
+[node name="NitroCrate19" parent="InnerNitro" index="18" instance=ExtResource( 4 )]
+position = Vector2( 418, 218 )
+phased_in = false
+
+[node name="NitroCrate20" parent="InnerNitro" index="19" instance=ExtResource( 4 )]
+position = Vector2( 418, 238 )
+phased_in = false
+
+[node name="BounceCrates" type="Node2D" parent="." index="3"]
+
+[node name="BounceCrate" parent="BounceCrates" index="0" instance=ExtResource( 5 )]
+position = Vector2( 358, 258 )
+
+[node name="BounceCrate2" parent="BounceCrates" index="1" instance=ExtResource( 5 )]
+position = Vector2( 358, 158 )
+
+[node name="BounceCrate3" parent="BounceCrates" index="2" instance=ExtResource( 5 )]
+position = Vector2( 378, 158 )
+
+[node name="BounceCrate4" parent="BounceCrates" index="3" instance=ExtResource( 5 )]
+position = Vector2( 378, 258 )
+
+[node name="Player" parent="." index="4"]
+position = Vector2( 247.365, 269.623 )
+
+[node name="EndPoint" parent="." index="7"]
+position = Vector2( 241, 256 )
