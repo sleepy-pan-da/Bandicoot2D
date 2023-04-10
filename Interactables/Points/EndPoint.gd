@@ -21,6 +21,8 @@ func _on_Area2D_body_entered(_body : Node) -> void:
 
 
 func reached() -> void:
+	AudioManager.playSfx("HitEndPoint")
+	AudioManager.playSfx("ReachedEndPoint")
 	is_flag_out = true
 	area2d.set_deferred("monitoring", false)
 	animated_sprite.play("FlagOut")

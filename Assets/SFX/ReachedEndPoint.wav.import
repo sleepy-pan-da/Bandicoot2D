@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ReachedEndPoint.wav-475fa090da1f524a8dadce5c23c9aa72.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/ReachedEndPoint.wav"
+dest_files=[ "res://.import/ReachedEndPoint.wav-475fa090da1f524a8dadce5c23c9aa72.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

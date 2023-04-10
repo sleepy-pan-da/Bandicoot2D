@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/EnabledEndPoint.wav-9f6dafb3d0aac5b90d5404014f9ee97e.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/EnabledEndPoint.wav"
+dest_files=[ "res://.import/EnabledEndPoint.wav-9f6dafb3d0aac5b90d5404014f9ee97e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

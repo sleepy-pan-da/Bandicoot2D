@@ -6,7 +6,11 @@ onready var endpt : EndPoint = $EndPoint
 
 func _ready() -> void:
     EventManager.connect("collected_fruit", self, "on_collected_fruit")
-    enable_endpt_if_all_fruits_are_collected()
+    init_endpt_if_all_fruits_are_collected()
+
+
+func init_endpt_if_all_fruits_are_collected() -> void:
+    if fruits_left == 0: endpt.enable()
 
 
 func on_collected_fruit() -> void:
@@ -16,6 +20,7 @@ func on_collected_fruit() -> void:
 
 func enable_endpt_if_all_fruits_are_collected() -> void:
     if fruits_left == 0:
+        AudioManager.playSfx("EnabledEndPoint")
         endpt.enable()
 
 

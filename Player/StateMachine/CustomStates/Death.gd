@@ -10,6 +10,7 @@ var velocity : Vector2 = Vector2()
 var horizontal_direction : int = 0
 
 func enter(_msg := {}) -> void:
+	AudioManager.playSfx("Die")
 	randomize()
 	horizontal_direction = 1 if (randi() % 2 == 0) else -1
 	velocity.x = horizontal_direction * INITIAL_LEFT_VELOCITY
