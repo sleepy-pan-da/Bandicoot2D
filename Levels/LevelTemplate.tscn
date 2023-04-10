@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Interactables/Points/EndPoint.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Background/RegularBackground.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/ParallaxBackground/ParallaxBackground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Levels/LevelManager.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Fonts/press_start/prstartk.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://UI/LevelUI/LevelIndicator.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 6 )
 
 [node name="LevelTemplate" type="Node2D"]
 script = ExtResource( 5 )
@@ -40,3 +45,25 @@ margin_bottom = -53.0
 
 [node name="EndPoint" parent="." instance=ExtResource( 1 )]
 position = Vector2( 720, 0 )
+
+[node name="UI" type="Control" parent="."]
+margin_right = 720.0
+margin_bottom = 405.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelIndicator" type="Label" parent="UI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -96.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 1 )
+text = "15/15"
+align = 2
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

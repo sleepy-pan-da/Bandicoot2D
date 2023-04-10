@@ -38,6 +38,7 @@ stream = ExtResource( 7 )
 
 [node name="HitEndPoint" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource( 3 )
+volume_db = -8.0
 pitch_scale = 4.0
 
 [node name="ReachedEndPoint" type="AudioStreamPlayer" parent="SFX"]

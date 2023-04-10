@@ -3,8 +3,10 @@ extends Node2D
 
 export var fruits_left : int = 0
 onready var endpt : EndPoint = $EndPoint
+onready var level_indicator : Label = $UI/LevelIndicator
 
 func _ready() -> void:
+    level_indicator.update_label(name)
     EventManager.connect("collected_fruit", self, "on_collected_fruit")
     init_endpt_if_all_fruits_are_collected()
 
