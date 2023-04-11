@@ -290,7 +290,7 @@ position = Vector2( 414, 238 )
 position = Vector2( 434, 238 )
 
 [node name="GoldBlock3" type="Node2D" parent="." index="5"]
-position = Vector2( 541, 256 )
+position = Vector2( 512, 256 )
 script = ExtResource( 8 )
 phased_in = false
 path_to_tilemap = NodePath("GoldTerrainTileMap")
@@ -305,7 +305,7 @@ position = Vector2( -16, -32 )
 shape = SubResource( 11 )
 
 [node name="Spikes2" type="Node2D" parent="." index="6"]
-position = Vector2( 284, 0 )
+position = Vector2( 255, 0 )
 
 [node name="Spikes6" parent="Spikes2" index="0" instance=ExtResource( 6 )]
 position = Vector2( 265, 280 )
