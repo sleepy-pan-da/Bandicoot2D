@@ -20,6 +20,7 @@ func _ready() -> void:
     state_machine.connect("transitioned", self, "update_sprite_animation")
     state_machine.get_node("Idle").facing_left = facing_left_initially
 
+
 func update_sprite_animation(new_animation_name : String):
     sprite_animation.animation = new_animation_name
 
