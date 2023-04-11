@@ -21,3 +21,5 @@ signal toggle_phase()
 signal collected_fruit()
 
 signal died()
+
+signal completed_level()

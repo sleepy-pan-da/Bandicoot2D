@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilemaps/GrassTerrainTileMap.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Tilemaps/StationaryPlatformTileMap.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Phase/PhaseInHitbox/PhaseInHitbox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Phase/TogglePhase.gd" type="Script" id=7]
+[ext_resource path="res://Levels/Level12.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -615,6 +616,7 @@ extents = Vector2( 39, 3 )
 
 [node name="Level11" instance=ExtResource( 1 )]
 fruits_left = 12
+next_level = ExtResource( 8 )
 
 [node name="Terrain" parent="." index="0"]
 position = Vector2( 0, 27 )

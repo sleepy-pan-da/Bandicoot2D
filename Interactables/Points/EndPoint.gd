@@ -27,6 +27,8 @@ func reached() -> void:
 	area2d.set_deferred("monitoring", false)
 	animated_sprite.play("FlagOut")
 	confetti.emitting = true
+	yield(get_tree().create_timer(2), "timeout")
+	EventManager.emit_signal("completed_level")
 
 
 func _on_AnimatedSprite_animation_finished() -> void:
