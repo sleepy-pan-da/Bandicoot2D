@@ -17,7 +17,7 @@ func transition_in() -> void:
 
 
 func transition_out() -> void:
-	material.set_shader_param("progress", 1)
+	material.set_shader_param("progress", 0)
 	tween.interpolate_property(material, "shader_param/progress", 0, 1, 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	tween.start()
 	black_screen = true
