@@ -24,15 +24,15 @@ region = Rect2( 56, 0, 28, 24 )
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 1 ) ],
-"loop": false,
-"name": "Default",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
 "loop": false,
 "name": "Breaking",
 "speed": 15.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": false,
+"name": "Default",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=5]

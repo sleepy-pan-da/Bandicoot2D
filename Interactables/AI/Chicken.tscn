@@ -140,7 +140,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=29]
+[sub_resource type="RectangleShape2D" id=33]
 extents = Vector2( 15, 13 )
 
 [sub_resource type="DynamicFont" id=30]
@@ -152,6 +152,7 @@ extents = Vector2( 15, 13 )
 
 [node name="Chicken" type="KinematicBody2D"]
 collision_layer = 32
+collision_mask = 17
 script = ExtResource( 5 )
 
 [node name="StateMachine" parent="." instance=ExtResource( 1 )]
@@ -173,12 +174,12 @@ path_to_chicken = NodePath("../..")
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 14 )
 animation = "Idle"
-frame = 8
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 4 )
-shape = SubResource( 29 )
+shape = SubResource( 33 )
 
 [node name="LeftRayCast" type="RayCast2D" parent="."]
 enabled = true
@@ -191,6 +192,7 @@ cast_to = Vector2( 1000, 0 )
 collision_mask = 4
 
 [node name="Label" type="Label" parent="."]
+visible = false
 margin_left = -85.0
 margin_top = -29.0
 margin_right = 87.0

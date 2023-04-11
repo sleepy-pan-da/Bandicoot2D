@@ -178,6 +178,9 @@ position = Vector2( 204, 246.997 )
 [node name="NitroCrate" parent="." instance=ExtResource( 16 )]
 position = Vector2( 354, 263.997 )
 
+[node name="NitroCrate2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 354, 263.997 )
+
 [node name="EndPoint" parent="." instance=ExtResource( 17 )]
 position = Vector2( 124, 304 )
 

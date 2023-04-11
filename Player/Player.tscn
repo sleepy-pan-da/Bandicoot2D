@@ -189,7 +189,7 @@ path_to_player = NodePath("../..")
 position = Vector2( 9.53674e-07, 9.53674e-07 )
 frames = SubResource( 27 )
 animation = "Idle"
-frame = 10
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

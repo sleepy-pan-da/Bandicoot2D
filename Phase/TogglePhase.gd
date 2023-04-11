@@ -36,6 +36,7 @@ func update() -> void:
 		# NITRO
 		physics_body.set_collision_layer_bit(4, phased_in)
 		physics_body.set_collision_mask_bit(2, phased_in)
+		physics_body.set_collision_mask_bit(5, phased_in)
 		return
 
 	# phase in hitbox will kick in before physics collisions to properly check if player is within phased in objects 
