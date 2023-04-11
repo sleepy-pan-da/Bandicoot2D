@@ -1,14 +1,16 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Interactables/Points/EndPoint.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Background/RegularBackground.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/ParallaxBackground/ParallaxBackground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Levels/LevelManager.gd" type="Script" id=5]
-[ext_resource path="res://Assets/Fonts/press_start/prstartk.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Assets/Fonts/monogram.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://UI/LevelUI/LevelIndicator.gd" type="Script" id=7]
+[ext_resource path="res://Shaders/ScreenTransition.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=1]
+size = 32
 font_data = ExtResource( 6 )
 
 [node name="LevelTemplate" type="Node2D"]
@@ -26,6 +28,7 @@ layer = -2
 [node name="RegularBackground" parent="Background" instance=ExtResource( 2 )]
 margin_left = 0.0
 margin_bottom = -357.0
+color = Color( 0.129412, 0.121569, 0.188235, 1 )
 
 [node name="RegularBackground3" parent="Background" instance=ExtResource( 2 )]
 margin_left = 0.0
@@ -54,16 +57,19 @@ __meta__ = {
 }
 
 [node name="LevelIndicator" type="Label" parent="UI"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -96.0
-margin_top = 16.0
-margin_right = -16.0
-margin_bottom = 35.0
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -38.0
+margin_right = 76.0
+margin_bottom = -12.0
 custom_fonts/font = SubResource( 1 )
 text = "15/15"
-align = 2
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScreenTransition" parent="CanvasLayer" instance=ExtResource( 8 )]
