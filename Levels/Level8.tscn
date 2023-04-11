@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilemaps/GrassTerrainTileMap.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Assets/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" type="Texture" id=6]
 [ext_resource path="res://Interactables/Crates/BasicCrate/BasicCrate.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Phase/PhaseInHitbox/PhaseInHitbox.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/SimpleKeys/Jumbo/Dark/Spritesheets/P.png" type="Texture" id=9]
+[ext_resource path="res://UI/Controls/P.gd" type="Script" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -611,6 +613,27 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 24/z_index = 0
 
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 19, 21 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 9 )
+region = Rect2( 19, 0, 19, 21 )
+
+[sub_resource type="SpriteFrames" id=33]
+animations = [ {
+"frames": [ SubResource( 35 ) ],
+"loop": false,
+"name": "Default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 36 ) ],
+"loop": false,
+"name": "Pressed",
+"speed": 5.0
+} ]
+
 [sub_resource type="RectangleShape2D" id=27]
 extents = Vector2( 32, 48 )
 
@@ -625,7 +648,15 @@ position = Vector2( 1, 1 )
 tile_set = SubResource( 26 )
 tile_data = PoolIntArray( 589835, 8, 0, 589836, 6, 0, 589837, 6, 0, 589838, 6, 0, 589839, 6, 0, 589840, 6, 0, 589841, 6, 0, 589842, 6, 0, 589843, 6, 0, 589844, 6, 0, 589845, 6, 0, 589846, 6, 0, 589847, 6, 0, 589848, 6, 0, 589849, 6, 0, 589850, 6, 0, 589851, 6, 0, 589852, 9, 0, 655371, 4, 0, 655388, 3, 0, 720907, 4, 0, 720924, 3, 0, 786443, 4, 0, 786460, 3, 0, 851979, 4, 0, 851996, 3, 0, 917515, 4, 0, 917532, 3, 0, 983051, 4, 0, 983068, 3, 0, 1048587, 10, 0, 1048588, 1, 0, 1048589, 1, 0, 1048590, 1, 0, 1048591, 1, 0, 1048592, 1, 0, 1048593, 1, 0, 1048594, 1, 0, 1048595, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048598, 1, 0, 1048599, 1, 0, 1048600, 1, 0, 1048601, 1, 0, 1048602, 1, 0, 1048603, 1, 0, 1048604, 11, 0 )
 
-[node name="Wall" type="Node2D" parent="." index="1"]
+[node name="Controls" type="Node2D" parent="." index="1"]
+
+[node name="P" type="AnimatedSprite" parent="Controls" index="0"]
+position = Vector2( 400, 181 )
+frames = SubResource( 33 )
+animation = "Default"
+script = ExtResource( 13 )
+
+[node name="Wall" type="Node2D" parent="." index="2"]
 position = Vector2( 1, 1 )
 script = ExtResource( 3 )
 path_to_tilemap = NodePath("GoldTerrainTileMap")
@@ -640,11 +671,11 @@ position = Vector2( 298, 170 )
 position = Vector2( 22, 38 )
 shape = SubResource( 27 )
 
-[node name="BasicCrate" parent="." index="2" instance=ExtResource( 7 )]
+[node name="BasicCrate" parent="." index="3" instance=ExtResource( 7 )]
 position = Vector2( 384, 247 )
 phased_in = false
 
-[node name="Player" parent="." index="3"]
+[node name="Player" parent="." index="4"]
 position = Vector2( 213, 229 )
 
 [node name="RegularBackground" parent="Background" index="0"]
@@ -659,7 +690,7 @@ margin_right = -543.0
 [node name="RegularBackground4" parent="Background" index="3"]
 margin_left = 460.0
 
-[node name="EndPoint" parent="." index="6"]
+[node name="EndPoint" parent="." index="7"]
 position = Vector2( 427, 225 )
 
 [editable path="Wall/PhaseInHitbox"]

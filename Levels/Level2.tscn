@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilemaps/GrassTerrainTileMap.tscn" type="PackedScene" id=2]
@@ -7,6 +7,101 @@
 [ext_resource path="res://Tilemaps/PinkGrassTerrainTileMap.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Levels/Background/RegularBackground.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Levels/Level3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/SimpleKeys/Jumbo/Dark/Single PNGs/A.png" type="Texture" id=8]
+[ext_resource path="res://Assets/SimpleKeys/Jumbo/Dark/Spritesheets/A.png" type="Texture" id=9]
+[ext_resource path="res://Assets/SimpleKeys/Jumbo/Dark/Spritesheets/ARROWLEFT.png" type="Texture" id=10]
+[ext_resource path="res://Assets/SimpleKeys/Jumbo/Dark/Single PNGs/ARROWLEFT.png" type="Texture" id=11]
+[ext_resource path="res://UI/Controls/A.gd" type="Script" id=12]
+[ext_resource path="res://UI/Controls/LeftArrow.gd" type="Script" id=13]
+[ext_resource path="res://Assets/Fonts/monogram.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://UI/Controls/W.gd" type="Script" id=15]
+[ext_resource path="res://UI/Controls/UpArrow.gd" type="Script" id=16]
+[ext_resource path="res://Assets/SimpleKeys/Jumbo/Dark/Spritesheets/W.png" type="Texture" id=17]
+[ext_resource path="res://Assets/SimpleKeys/Jumbo/Dark/Spritesheets/ARROWUP.png" type="Texture" id=18]
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 9 )
+region = Rect2( 19, 0, 19, 21 )
+
+[sub_resource type="SpriteFrames" id=33]
+animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "Default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 35 ) ],
+"loop": false,
+"name": "Pressed",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 19, 21 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 10 )
+region = Rect2( 19, 0, 19, 21 )
+
+[sub_resource type="SpriteFrames" id=36]
+animations = [ {
+"frames": [ SubResource( 37 ) ],
+"loop": false,
+"name": "Default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 38 ) ],
+"loop": false,
+"name": "Pressed",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=32]
+size = 32
+font_data = ExtResource( 14 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 17 )
+region = Rect2( 0, 0, 19, 21 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 17 )
+region = Rect2( 19, 0, 19, 21 )
+
+[sub_resource type="SpriteFrames" id=39]
+animations = [ {
+"frames": [ SubResource( 41 ) ],
+"loop": false,
+"name": "Default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 42 ) ],
+"loop": false,
+"name": "Pressed",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 18 )
+region = Rect2( 0, 0, 19, 21 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 18 )
+region = Rect2( 19, 0, 19, 21 )
+
+[sub_resource type="SpriteFrames" id=40]
+animations = [ {
+"frames": [ SubResource( 43 ) ],
+"loop": false,
+"name": "Default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 44 ) ],
+"loop": false,
+"name": "Pressed",
+"speed": 5.0
+} ]
 
 [node name="Level2" instance=ExtResource( 1 )]
 next_level = ExtResource( 7 )
@@ -30,7 +125,64 @@ tile_data = PoolIntArray( 851990, 0, 0, 851991, 1, 0, 851992, 2, 0, 917526, 3, 0
 [node name="PinkGrassTerrainTileMap" parent="Terrain/Block3" index="0" instance=ExtResource( 5 )]
 tile_data = PoolIntArray( 983056, 0, 0, 983057, 1, 0, 983058, 2, 0, 1048592, 3, 0, 1048593, 4, 0, 1048594, 5, 0, 1114128, 3, 0, 1114129, 4, 0, 1114130, 5, 0 )
 
-[node name="Spikes" type="Node2D" parent="." index="1"]
+[node name="Controls1" type="Node2D" parent="." index="1"]
+
+[node name="A" type="AnimatedSprite" parent="Controls1" index="0"]
+position = Vector2( 477.5, 121 )
+frames = SubResource( 33 )
+animation = "Default"
+script = ExtResource( 12 )
+
+[node name="LeftArrow" type="AnimatedSprite" parent="Controls1" index="1"]
+position = Vector2( 544.5, 121 )
+frames = SubResource( 36 )
+animation = "Default"
+script = ExtResource( 13 )
+
+[node name="Divider" type="Label" parent="Controls1" index="2"]
+margin_left = 500.5
+margin_top = 106.0
+margin_right = 524.5
+margin_bottom = 132.0
+custom_fonts/font = SubResource( 32 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "or"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls2" type="Node2D" parent="." index="2"]
+position = Vector2( 0, 28 )
+
+[node name="W" type="AnimatedSprite" parent="Controls2" index="0"]
+position = Vector2( 477.5, 121 )
+frames = SubResource( 39 )
+animation = "Default"
+script = ExtResource( 15 )
+
+[node name="UpArrow" type="AnimatedSprite" parent="Controls2" index="1"]
+position = Vector2( 544.5, 121 )
+frames = SubResource( 40 )
+animation = "Default"
+script = ExtResource( 16 )
+
+[node name="Divider" type="Label" parent="Controls2" index="2"]
+margin_left = 500.5
+margin_top = 106.0
+margin_right = 524.5
+margin_bottom = 132.0
+custom_fonts/font = SubResource( 32 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "or"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spikes" type="Node2D" parent="." index="3"]
 
 [node name="Spikes1" parent="Spikes" index="0" instance=ExtResource( 3 )]
 position = Vector2( 440, 168 )
@@ -136,7 +288,7 @@ position = Vector2( 152, 216 )
 rotation = -3.14159
 can_be_toggled = false
 
-[node name="Player" parent="." index="2"]
+[node name="Player" parent="." index="4"]
 position = Vector2( 555.002, 270.172 )
 facing_left_initially = true
 
@@ -170,5 +322,5 @@ margin_top = 82.0
 margin_right = -512.0
 margin_bottom = -212.0
 
-[node name="EndPoint" parent="." index="5"]
+[node name="EndPoint" parent="." index="7"]
 position = Vector2( 172, 256 )

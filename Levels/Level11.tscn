@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilemaps/GrassTerrainTileMap.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Phase/PhaseInHitbox/PhaseInHitbox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Phase/TogglePhase.gd" type="Script" id=7]
 [ext_resource path="res://Levels/Level12.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/SimpleKeys/Jumbo/Dark/Spritesheets/R.png" type="Texture" id=9]
+[ext_resource path="res://UI/Controls/R.gd" type="Script" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -611,6 +613,27 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 24/z_index = 0
 
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 19, 21 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 9 )
+region = Rect2( 19, 0, 19, 21 )
+
+[sub_resource type="SpriteFrames" id=39]
+animations = [ {
+"frames": [ SubResource( 37 ) ],
+"loop": false,
+"name": "Default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 38 ) ],
+"loop": false,
+"name": "Pressed",
+"speed": 5.0
+} ]
+
 [sub_resource type="RectangleShape2D" id=27]
 extents = Vector2( 39, 3 )
 
@@ -625,7 +648,16 @@ position = Vector2( 0, 27 )
 tile_set = SubResource( 26 )
 tile_data = PoolIntArray( -65522, 8, 0, -65521, 6, 0, -65520, 6, 0, -65519, 6, 0, -65518, 6, 0, -65517, 6, 0, -65516, 6, 0, -65515, 6, 0, -65514, 6, 0, -65513, 6, 0, -65512, 6, 0, -65511, 6, 0, -65510, 6, 0, -65509, 6, 0, -65508, 6, 0, -65507, 6, 0, -65506, 6, 0, -65505, 9, 0, 14, 4, 0, 31, 3, 0, 65550, 4, 0, 65567, 3, 0, 131086, 4, 0, 131103, 3, 0, 196622, 4, 0, 196639, 3, 0, 262158, 4, 0, 262175, 3, 0, 327694, 4, 0, 327711, 3, 0, 393230, 4, 0, 393247, 3, 0, 458766, 4, 0, 458783, 3, 0, 524302, 4, 0, 524319, 3, 0, 589838, 4, 0, 589855, 3, 0, 655374, 4, 0, 655391, 3, 0, 720910, 4, 0, 720927, 3, 0, 786446, 4, 0, 786463, 3, 0, 851982, 4, 0, 851999, 3, 0, 917518, 4, 0, 917535, 3, 0, 983054, 4, 0, 983071, 3, 0, 1048590, 4, 0, 1048607, 3, 0, 1114126, 4, 0, 1114143, 3, 0, 1179662, 4, 0, 1179679, 3, 0, 1245198, 4, 0, 1245215, 3, 0, 1310734, 4, 0, 1310751, 3, 0, 1376270, 10, 0, 1376271, 1, 0, 1376272, 1, 0, 1376273, 1, 0, 1376274, 1, 0, 1376275, 1, 0, 1376276, 1, 0, 1376277, 1, 0, 1376278, 1, 0, 1376279, 1, 0, 1376280, 1, 0, 1376281, 1, 0, 1376282, 1, 0, 1376283, 1, 0, 1376284, 1, 0, 1376285, 1, 0, 1376286, 1, 0, 1376287, 11, 0 )
 
-[node name="Crates1" type="Node2D" parent="." index="1"]
+[node name="Controls1" type="Node2D" parent="." index="1"]
+position = Vector2( -200, 48 )
+
+[node name="R" type="AnimatedSprite" parent="Controls1" index="0"]
+position = Vector2( 664, 256 )
+frames = SubResource( 39 )
+animation = "Default"
+script = ExtResource( 10 )
+
+[node name="Crates1" type="Node2D" parent="." index="2"]
 position = Vector2( 0, 27 )
 
 [node name="BasicCrate" parent="Crates1" index="0" instance=ExtResource( 4 )]
@@ -649,7 +681,7 @@ position = Vector2( 388, 278 )
 position = Vector2( 388, 258 )
 phased_in = false
 
-[node name="Crates2" type="Node2D" parent="." index="2"]
+[node name="Crates2" type="Node2D" parent="." index="3"]
 position = Vector2( 0, -131 )
 
 [node name="BasicCrate" parent="Crates2" index="0" instance=ExtResource( 4 )]
@@ -673,7 +705,7 @@ position = Vector2( 388, 292 )
 position = Vector2( 388, 272 )
 phased_in = false
 
-[node name="Platforms" type="Node2D" parent="." index="3"]
+[node name="Platforms" type="Node2D" parent="." index="4"]
 position = Vector2( -176, -7 )
 
 [node name="Platform1" type="Node2D" parent="Platforms" index="0"]
@@ -704,7 +736,7 @@ tile_data = PoolIntArray( 4128820, 0, 0, 4128821, 1, 0, 4128822, 1, 0, 4128823, 
 [node name="PhaseInHitbox" parent="Platforms/Platform2" index="1" instance=ExtResource( 6 )]
 position = Vector2( 432, 254 )
 
-[node name="Player" parent="." index="4"]
+[node name="Player" parent="." index="5"]
 position = Vector2( 305, 312 )
 
 [node name="RegularBackground" parent="Background" index="0"]
@@ -723,7 +755,7 @@ margin_left = 509.0
 margin_top = 14.0
 margin_bottom = -29.0
 
-[node name="EndPoint" parent="." index="7"]
+[node name="EndPoint" parent="." index="8"]
 position = Vector2( 462, 55 )
 
 [editable path="Platforms/Platform1/PhaseInHitbox"]
