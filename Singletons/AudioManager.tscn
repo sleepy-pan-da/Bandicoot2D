@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Singletons/AudioManager.gd" type="Script" id=1]
 [ext_resource path="res://Assets/SFX/BreakCrate.wav" type="AudioStream" id=2]
@@ -7,8 +7,9 @@
 [ext_resource path="res://Assets/SFX/Crunch.wav" type="AudioStream" id=5]
 [ext_resource path="res://Assets/SFX/Grunts1.wav" type="AudioStream" id=6]
 [ext_resource path="res://Assets/SFX/EnabledEndPoint.wav" type="AudioStream" id=7]
-[ext_resource path="res://Assets/SFX/ReachedEndPoint.wav" type="AudioStream" id=8]
+[ext_resource path="res://Assets/SFX/ClearBlks4.wav" type="AudioStream" id=8]
 [ext_resource path="res://Assets/SFX/ChickenDie.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Music/Theme.mp3" type="AudioStream" id=10]
 
 [node name="AudioManager" type="Node2D"]
 script = ExtResource( 1 )
@@ -36,6 +37,7 @@ pitch_scale = 2.0
 
 [node name="EnabledEndPoint" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource( 7 )
+volume_db = 4.0
 
 [node name="HitEndPoint" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource( 3 )
@@ -50,3 +52,7 @@ stream = ExtResource( 9 )
 volume_db = -8.0
 
 [node name="Music" type="Node2D" parent="."]
+
+[node name="Theme" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 10 )
+volume_db = -8.0
