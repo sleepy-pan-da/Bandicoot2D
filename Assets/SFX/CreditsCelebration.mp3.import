@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/CreditsCelebration.mp3-cad2c0755863cb8978bcd279bbb725ec.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/CreditsCelebration.mp3"
+dest_files=[ "res://.import/CreditsCelebration.mp3-cad2c0755863cb8978bcd279bbb725ec.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

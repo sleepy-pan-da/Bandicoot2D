@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Levels/Background/RegularBackground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Fonts/monogram.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://UI/Credits/Note.gd" type="Script" id=3]
 [ext_resource path="res://UI/Credits/Credits.gd" type="Script" id=4]
+[ext_resource path="res://ParticleEffects/fake_confetti_particles.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Shaders/ScreenTransition.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
@@ -65,6 +66,18 @@ __meta__ = {
 }
 
 [node name="Tween" type="Tween" parent="Note"]
+
+[node name="FakeConfettiParticles" parent="Note" instance=ExtResource( 5 )]
+position = Vector2( 250, 200 )
+type = 0
+amount = 300
+random_amount = false
+
+[node name="FakeConfettiParticles2" parent="Note" instance=ExtResource( 5 )]
+position = Vector2( 470, 200 )
+type = 0
+amount = 300
+random_amount = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

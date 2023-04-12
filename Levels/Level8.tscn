@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tilemaps/GrassTerrainTileMap.tscn" type="PackedScene" id=2]
@@ -8,7 +8,10 @@
 [ext_resource path="res://Assets/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" type="Texture" id=6]
 [ext_resource path="res://Interactables/Crates/BasicCrate/BasicCrate.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Phase/PhaseInHitbox/PhaseInHitbox.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Assets/SimpleKeys/Jumbo/Dark/Spritesheets/P.png" type="Texture" id=9]
+[ext_resource path="res://Assets/SimpleKeys/Jumbo/Light/Spritesheets/P.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Fonts/monogram.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Assets/SimpleKeys/Jumbo/Light/Spritesheets/SPACEALTERNATIVE.png" type="Texture" id=11]
+[ext_resource path="res://UI/Controls/Space.gd" type="Script" id=12]
 [ext_resource path="res://UI/Controls/P.gd" type="Script" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -634,7 +637,32 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=30]
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 98, 21 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 11 )
+region = Rect2( 98, 0, 98, 21 )
+
+[sub_resource type="SpriteFrames" id=32]
+animations = [ {
+"frames": [ SubResource( 30 ) ],
+"loop": false,
+"name": "Default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 31 ) ],
+"loop": false,
+"name": "Pressed",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=33]
+size = 32
+font_data = ExtResource( 10 )
+
+[sub_resource type="RectangleShape2D" id=34]
 extents = Vector2( 32, 48 )
 
 [node name="Level8" instance=ExtResource( 1 )]
@@ -652,10 +680,30 @@ tile_data = PoolIntArray( 589835, 8, 0, 589836, 6, 0, 589837, 6, 0, 589838, 6, 0
 position = Vector2( 39, 0 )
 
 [node name="P" type="AnimatedSprite" parent="Controls" index="0"]
-position = Vector2( 400, 181 )
+position = Vector2( 246.5, 133 )
 frames = SubResource( 29 )
 animation = "Default"
 script = ExtResource( 13 )
+
+[node name="Space" type="AnimatedSprite" parent="Controls" index="1"]
+position = Vector2( 342, 133 )
+frames = SubResource( 32 )
+animation = "Default"
+script = ExtResource( 12 )
+
+[node name="Divider" type="Label" parent="Controls" index="2"]
+margin_left = 263.5
+margin_top = 118.0
+margin_right = 287.5
+margin_bottom = 144.0
+custom_fonts/font = SubResource( 33 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "or"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Wall" type="Node2D" parent="." index="2"]
 position = Vector2( 40, 1 )
@@ -670,7 +718,7 @@ position = Vector2( 298, 170 )
 
 [node name="CollisionShape2D" parent="Wall/PhaseInHitbox" index="0"]
 position = Vector2( 22, 38 )
-shape = SubResource( 30 )
+shape = SubResource( 34 )
 
 [node name="BasicCrate" parent="." index="3" instance=ExtResource( 7 )]
 position = Vector2( 423, 247 )
