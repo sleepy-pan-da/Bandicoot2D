@@ -1,18 +1,10 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Levels/LevelTemplate.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Tilemaps/GrassTerrainTileMap.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" type="Texture" id=3]
-[ext_resource path="res://Tilemaps/GoldTerrainTileMap.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Interactables/AI/Chicken.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Interactables/Traps/Spikes.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Phase/PhaseInHitbox/PhaseInHitbox.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Phase/TogglePhase.gd" type="Script" id=8]
-[ext_resource path="res://Interactables/Crates/BasicCrate/BasicCrate.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Interactables/Crates/NitroCrate/NitroCrate.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Tilemaps/StoneTerrainTileMap.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Levels/Background/RegularBackground.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Levels/Credits.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Interactables/Fruits/Fruit.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Tilemaps/GrassTerrainTileMap.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Pixel Adventure 1/Free/Terrain/Terrain (16x16).png" type="Texture" id=10]
+[ext_resource path="res://Assets/Fonts/monogram.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -91,7 +83,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="TileSet" id=26]
 0/name = "Terrain (16x16).png 0"
-0/texture = ExtResource( 3 )
+0/texture = ExtResource( 10 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 128, 16, 16 )
@@ -112,7 +104,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 0/z_index = 0
 1/name = "Terrain (16x16).png 1"
-1/texture = ExtResource( 3 )
+1/texture = ExtResource( 10 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 16, 128, 16, 16 )
@@ -133,7 +125,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 1/z_index = 0
 2/name = "Terrain (16x16).png 2"
-2/texture = ExtResource( 3 )
+2/texture = ExtResource( 10 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 32, 128, 16, 16 )
@@ -154,7 +146,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 2/z_index = 0
 3/name = "Terrain (16x16).png 3"
-3/texture = ExtResource( 3 )
+3/texture = ExtResource( 10 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 144, 16, 16 )
@@ -175,7 +167,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 3/z_index = 0
 4/name = "Terrain (16x16).png 4"
-4/texture = ExtResource( 3 )
+4/texture = ExtResource( 10 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 32, 144, 16, 16 )
@@ -196,7 +188,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 4/z_index = 0
 5/name = "Terrain (16x16).png 5"
-5/texture = ExtResource( 3 )
+5/texture = ExtResource( 10 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 160, 16, 16 )
@@ -217,7 +209,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 5/z_index = 0
 6/name = "Terrain (16x16).png 6"
-6/texture = ExtResource( 3 )
+6/texture = ExtResource( 10 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 16, 160, 16, 16 )
@@ -238,7 +230,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 6/z_index = 0
 7/name = "Terrain (16x16).png 7"
-7/texture = ExtResource( 3 )
+7/texture = ExtResource( 10 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 32, 160, 16, 16 )
@@ -259,7 +251,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 7/z_index = 0
 8/name = "Terrain (16x16).png 8"
-8/texture = ExtResource( 3 )
+8/texture = ExtResource( 10 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 48, 128, 16, 16 )
@@ -280,7 +272,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 8/z_index = 0
 9/name = "Terrain (16x16).png 9"
-9/texture = ExtResource( 3 )
+9/texture = ExtResource( 10 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 64, 128, 16, 16 )
@@ -301,7 +293,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 9/z_index = 0
 10/name = "Terrain (16x16).png 10"
-10/texture = ExtResource( 3 )
+10/texture = ExtResource( 10 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 48, 144, 16, 16 )
@@ -322,7 +314,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 10/z_index = 0
 11/name = "Terrain (16x16).png 11"
-11/texture = ExtResource( 3 )
+11/texture = ExtResource( 10 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 64, 144, 16, 16 )
@@ -343,7 +335,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 11/z_index = 0
 12/name = "Terrain (16x16).png 12"
-12/texture = ExtResource( 3 )
+12/texture = ExtResource( 10 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 96, 0, 16, 16 )
@@ -364,7 +356,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 12/z_index = 0
 13/name = "Terrain (16x16).png 13"
-13/texture = ExtResource( 3 )
+13/texture = ExtResource( 10 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 112, 0, 16, 16 )
@@ -385,7 +377,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 13/z_index = 0
 14/name = "Terrain (16x16).png 14"
-14/texture = ExtResource( 3 )
+14/texture = ExtResource( 10 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 128, 0, 16, 16 )
@@ -406,7 +398,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 14/z_index = 0
 15/name = "Terrain (16x16).png 15"
-15/texture = ExtResource( 3 )
+15/texture = ExtResource( 10 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 96, 16, 16, 16 )
@@ -427,7 +419,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 15/z_index = 0
 16/name = "Terrain (16x16).png 16"
-16/texture = ExtResource( 3 )
+16/texture = ExtResource( 10 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 112, 16, 16, 16 )
@@ -448,7 +440,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 16/z_index = 0
 17/name = "Terrain (16x16).png 17"
-17/texture = ExtResource( 3 )
+17/texture = ExtResource( 10 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 128, 16, 16, 16 )
@@ -469,7 +461,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 17/z_index = 0
 18/name = "Terrain (16x16).png 18"
-18/texture = ExtResource( 3 )
+18/texture = ExtResource( 10 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 96, 32, 16, 16 )
@@ -490,7 +482,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 18/z_index = 0
 19/name = "Terrain (16x16).png 19"
-19/texture = ExtResource( 3 )
+19/texture = ExtResource( 10 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 112, 32, 16, 16 )
@@ -511,7 +503,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 19/z_index = 0
 20/name = "Terrain (16x16).png 20"
-20/texture = ExtResource( 3 )
+20/texture = ExtResource( 10 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 128, 32, 16, 16 )
@@ -532,7 +524,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 20/z_index = 0
 21/name = "Terrain (16x16).png 21"
-21/texture = ExtResource( 3 )
+21/texture = ExtResource( 10 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 144, 0, 16, 16 )
@@ -553,7 +545,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 21/z_index = 0
 22/name = "Terrain (16x16).png 22"
-22/texture = ExtResource( 3 )
+22/texture = ExtResource( 10 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 160, 0, 16, 16 )
@@ -574,7 +566,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 22/z_index = 0
 23/name = "Terrain (16x16).png 23"
-23/texture = ExtResource( 3 )
+23/texture = ExtResource( 10 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 144, 16, 16, 16 )
@@ -595,7 +587,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 23/z_index = 0
 24/name = "Terrain (16x16).png 24"
-24/texture = ExtResource( 3 )
+24/texture = ExtResource( 10 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 160, 16, 16, 16 )
@@ -616,358 +608,47 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 24/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=27]
-extents = Vector2( 16, 16 )
+[sub_resource type="DynamicFont" id=27]
+size = 32
+font_data = ExtResource( 11 )
 
-[sub_resource type="RectangleShape2D" id=28]
-extents = Vector2( 16, 16 )
+[node name="ThumbnailLevel" instance=ExtResource( 1 )]
 
-[sub_resource type="RectangleShape2D" id=29]
-extents = Vector2( 32, 16 )
-
-[node name="Level18" instance=ExtResource( 1 )]
-fruits_left = 6
-next_level = ExtResource( 13 )
-
-[node name="GrassTerrainTileMap" parent="Terrain" index="0" instance=ExtResource( 2 )]
+[node name="GrassTerrainTileMap" parent="Terrain" index="0" instance=ExtResource( 9 )]
 tile_set = SubResource( 26 )
-tile_data = PoolIntArray( 458756, 8, 0, 458757, 6, 0, 458758, 6, 0, 458759, 6, 0, 458760, 6, 0, 458761, 6, 0, 458762, 6, 0, 458763, 6, 0, 458764, 6, 0, 458765, 6, 0, 458766, 6, 0, 458767, 6, 0, 458768, 6, 0, 458769, 6, 0, 458770, 6, 0, 458771, 9, 0, 458782, 8, 0, 458783, 6, 0, 458784, 6, 0, 458785, 6, 0, 458786, 6, 0, 458787, 6, 0, 458788, 6, 0, 458789, 6, 0, 458790, 6, 0, 458791, 6, 0, 458792, 9, 0, 524292, 4, 0, 524307, 3, 0, 524318, 4, 0, 524328, 3, 0, 589828, 4, 0, 589843, 3, 0, 589854, 4, 0, 589864, 3, 0, 655364, 4, 0, 655379, 3, 0, 655390, 4, 0, 655400, 3, 0, 720900, 4, 0, 720915, 5, 0, 720916, 6, 0, 720917, 6, 0, 720918, 6, 0, 720919, 6, 0, 720920, 6, 0, 720921, 6, 0, 720922, 6, 0, 720923, 6, 0, 720924, 6, 0, 720925, 6, 0, 720926, 7, 0, 720936, 3, 0, 786436, 4, 0, 786472, 3, 0, 851972, 4, 0, 852008, 3, 0, 917507, 8, 0, 917508, 7, 0, 917509, 1, 0, 917510, 1, 0, 917511, 1, 0, 917512, 1, 0, 917513, 1, 0, 917514, 1, 0, 917515, 1, 0, 917516, 1, 0, 917517, 1, 0, 917518, 1, 0, 917519, 1, 0, 917520, 1, 0, 917521, 1, 0, 917522, 1, 0, 917523, 1, 0, 917524, 1, 0, 917530, 4, 0, 917531, 1, 0, 917532, 1, 0, 917533, 1, 0, 917534, 1, 0, 917544, 3, 0, 983043, 4, 0, 983080, 3, 0, 1048579, 4, 0, 1048612, 0, 0, 1048613, 1, 0, 1048614, 1, 0, 1048615, 1, 0, 1048616, 11, 0, 1114115, 4, 0, 1114148, 3, 0, 1179651, 4, 0, 1179684, 3, 0, 1245187, 4, 0, 1245220, 3, 0, 1310723, 10, 0, 1310724, 1, 0, 1310725, 1, 0, 1310726, 1, 0, 1310727, 1, 0, 1310728, 1, 0, 1310729, 1, 0, 1310730, 1, 0, 1310731, 1, 0, 1310732, 1, 0, 1310733, 1, 0, 1310734, 1, 0, 1310735, 1, 0, 1310736, 1, 0, 1310737, 1, 0, 1310738, 1, 0, 1310739, 1, 0, 1310740, 1, 0, 1310741, 1, 0, 1310742, 1, 0, 1310743, 1, 0, 1310744, 1, 0, 1310745, 1, 0, 1310746, 1, 0, 1310747, 1, 0, 1310748, 1, 0, 1310749, 1, 0, 1310750, 1, 0, 1310751, 1, 0, 1310752, 1, 0, 1310753, 1, 0, 1310754, 1, 0, 1310755, 1, 0, 1310756, 11, 0 )
-
-[node name="StoneTerrainTileMap" parent="Terrain" index="1" instance=ExtResource( 11 )]
-tile_data = PoolIntArray( 917509, 12, 0, 917510, 12, 0, 917511, 12, 0, 917512, 12, 0, 917513, 12, 0, 917514, 12, 0, 917515, 12, 0, 917516, 12, 0, 917517, 12, 0, 917518, 12, 0, 917519, 12, 0, 917520, 12, 0, 917521, 12, 0, 917522, 12, 0, 917523, 12, 0, 917524, 12, 0, 917530, 12, 0, 917531, 12, 0, 917532, 12, 0, 917533, 12, 0, 917534, 12, 0 )
-
-[node name="GoldBlock1" type="Node2D" parent="." index="1"]
-position = Vector2( -112, 0 )
-script = ExtResource( 8 )
-path_to_tilemap = NodePath("GoldTerrainTileMap")
-
-[node name="GoldTerrainTileMap" parent="GoldBlock1" index="0" instance=ExtResource( 4 )]
-tile_data = PoolIntArray( 786446, 4, 0 )
-
-[node name="PhaseInHitbox" parent="GoldBlock1" index="1" instance=ExtResource( 7 )]
-position = Vector2( 240, 208 )
-
-[node name="CollisionShape2D" parent="GoldBlock1/PhaseInHitbox" index="0"]
-shape = SubResource( 27 )
-
-[node name="Spikes" type="Node2D" parent="." index="2"]
-
-[node name="Spikes" parent="Spikes" index="0" instance=ExtResource( 6 )]
-position = Vector2( 200, 216 )
-phased_in = false
-
-[node name="Spikes2" parent="Spikes" index="1" instance=ExtResource( 6 )]
-position = Vector2( 216, 216 )
-phased_in = false
-
-[node name="GoldBlock2" type="Node2D" parent="." index="3"]
-position = Vector2( 48, 0 )
-script = ExtResource( 8 )
-path_to_tilemap = NodePath("GoldTerrainTileMap")
-
-[node name="GoldTerrainTileMap" parent="GoldBlock2" index="0" instance=ExtResource( 4 )]
-tile_data = PoolIntArray( 786446, 4, 0 )
-
-[node name="PhaseInHitbox" parent="GoldBlock2" index="1" instance=ExtResource( 7 )]
-position = Vector2( 240, 208 )
-
-[node name="CollisionShape2D" parent="GoldBlock2/PhaseInHitbox" index="0"]
-shape = SubResource( 28 )
-
-[node name="Crates1" type="Node2D" parent="." index="4"]
-
-[node name="BasicCrate" parent="Crates1" index="0" instance=ExtResource( 9 )]
-position = Vector2( 346, 234 )
-can_be_toggled = false
-
-[node name="BasicCrate2" parent="Crates1" index="1" instance=ExtResource( 9 )]
-position = Vector2( 366, 234 )
-can_be_toggled = false
-
-[node name="BasicCrate3" parent="Crates1" index="2" instance=ExtResource( 9 )]
-position = Vector2( 386, 234 )
-can_be_toggled = false
-
-[node name="BasicCrate4" parent="Crates1" index="3" instance=ExtResource( 9 )]
-position = Vector2( 406, 234 )
-can_be_toggled = false
-
-[node name="Crates2" type="Node2D" parent="." index="5"]
-
-[node name="BasicCrate" parent="Crates2" index="0" instance=ExtResource( 9 )]
-position = Vector2( 506, 234 )
-
-[node name="BasicCrate2" parent="Crates2" index="1" instance=ExtResource( 9 )]
-position = Vector2( 526, 234 )
-
-[node name="GoldBlock3" type="Node2D" parent="." index="6"]
-position = Vector2( 352, 32 )
-script = ExtResource( 8 )
-can_be_toggled = false
-phased_in = false
-path_to_tilemap = NodePath("GoldTerrainTileMap")
-
-[node name="GoldTerrainTileMap" parent="GoldBlock3" index="0" instance=ExtResource( 4 )]
-tile_data = PoolIntArray( 786446, 4, 0, 786448, 4, 0 )
-
-[node name="PhaseInHitbox" parent="GoldBlock3" index="1" instance=ExtResource( 7 )]
-position = Vector2( 256, 208 )
-
-[node name="CollisionShape2D" parent="GoldBlock3/PhaseInHitbox" index="0"]
-shape = SubResource( 29 )
-
-[node name="Spikes2" type="Node2D" parent="." index="7"]
-
-[node name="Spikes" parent="Spikes2" index="0" instance=ExtResource( 6 )]
-position = Vector2( 552, 312 )
-can_be_toggled = false
-phased_in = false
-
-[node name="Spikes2" parent="Spikes2" index="1" instance=ExtResource( 6 )]
-position = Vector2( 568, 312 )
-can_be_toggled = false
-phased_in = false
-
-[node name="Nitro1" type="Node2D" parent="." index="8"]
-
-[node name="NitroCrate3" parent="Nitro1" index="0" instance=ExtResource( 10 )]
-position = Vector2( 526, 310 )
-can_be_toggled = false
-
-[node name="NitroCrate4" parent="Nitro1" index="1" instance=ExtResource( 10 )]
-position = Vector2( 506, 310 )
-can_be_toggled = false
-
-[node name="NitroCrate5" parent="Nitro1" index="2" instance=ExtResource( 10 )]
-position = Vector2( 486, 310 )
-can_be_toggled = false
-
-[node name="Nitro2" type="Node2D" parent="." index="9"]
-
-[node name="NitroCrate1" parent="Nitro2" index="0" instance=ExtResource( 10 )]
-position = Vector2( 426, 310 )
-can_be_toggled = false
-
-[node name="NitroCrate2" parent="Nitro2" index="1" instance=ExtResource( 10 )]
-position = Vector2( 406, 310 )
-can_be_toggled = false
-
-[node name="NitroCrate3" parent="Nitro2" index="2" instance=ExtResource( 10 )]
-position = Vector2( 386, 310 )
-can_be_toggled = false
-
-[node name="NitroCrate4" parent="Nitro2" index="3" instance=ExtResource( 10 )]
-position = Vector2( 366, 310 )
-can_be_toggled = false
-
-[node name="NitroCrate5" parent="Nitro2" index="4" instance=ExtResource( 10 )]
-position = Vector2( 346, 310 )
-can_be_toggled = false
-
-[node name="NitroCrate6" parent="Nitro2" index="5" instance=ExtResource( 10 )]
-position = Vector2( 426, 290 )
-can_be_toggled = false
-
-[node name="NitroCrate7" parent="Nitro2" index="6" instance=ExtResource( 10 )]
-position = Vector2( 406, 290 )
-can_be_toggled = false
-
-[node name="NitroCrate8" parent="Nitro2" index="7" instance=ExtResource( 10 )]
-position = Vector2( 386, 290 )
-can_be_toggled = false
-
-[node name="NitroCrate9" parent="Nitro2" index="8" instance=ExtResource( 10 )]
-position = Vector2( 366, 290 )
-can_be_toggled = false
-
-[node name="NitroCrate10" parent="Nitro2" index="9" instance=ExtResource( 10 )]
-position = Vector2( 346, 290 )
-can_be_toggled = false
-
-[node name="NitroCrate11" parent="Nitro2" index="10" instance=ExtResource( 10 )]
-position = Vector2( 426, 270 )
-can_be_toggled = false
-
-[node name="NitroCrate12" parent="Nitro2" index="11" instance=ExtResource( 10 )]
-position = Vector2( 406, 270 )
-can_be_toggled = false
-
-[node name="NitroCrate13" parent="Nitro2" index="12" instance=ExtResource( 10 )]
-position = Vector2( 386, 270 )
-can_be_toggled = false
-
-[node name="NitroCrate14" parent="Nitro2" index="13" instance=ExtResource( 10 )]
-position = Vector2( 366, 270 )
-can_be_toggled = false
-
-[node name="NitroCrate15" parent="Nitro2" index="14" instance=ExtResource( 10 )]
-position = Vector2( 346, 270 )
-can_be_toggled = false
-
-[node name="NitroCrate16" parent="Nitro2" index="15" instance=ExtResource( 10 )]
-position = Vector2( 426, 270 )
-can_be_toggled = false
-
-[node name="NitroCrate17" parent="Nitro2" index="16" instance=ExtResource( 10 )]
-position = Vector2( 406, 270 )
-can_be_toggled = false
-
-[node name="NitroCrate18" parent="Nitro2" index="17" instance=ExtResource( 10 )]
-position = Vector2( 386, 270 )
-can_be_toggled = false
-
-[node name="NitroCrate19" parent="Nitro2" index="18" instance=ExtResource( 10 )]
-position = Vector2( 366, 270 )
-can_be_toggled = false
-
-[node name="NitroCrate20" parent="Nitro2" index="19" instance=ExtResource( 10 )]
-position = Vector2( 346, 270 )
-can_be_toggled = false
-
-[node name="Nitro3" type="Node2D" parent="." index="10"]
-
-[node name="NitroCrate1" parent="Nitro3" index="0" instance=ExtResource( 10 )]
-position = Vector2( 302, 310 )
-
-[node name="NitroCrate2" parent="Nitro3" index="1" instance=ExtResource( 10 )]
-position = Vector2( 282, 310 )
-
-[node name="NitroCrate3" parent="Nitro3" index="2" instance=ExtResource( 10 )]
-position = Vector2( 262, 310 )
-
-[node name="NitroCrate4" parent="Nitro3" index="3" instance=ExtResource( 10 )]
-position = Vector2( 242, 310 )
-
-[node name="NitroCrate5" parent="Nitro3" index="4" instance=ExtResource( 10 )]
-position = Vector2( 222, 310 )
-
-[node name="Nitro4" type="Node2D" parent="." index="11"]
-
-[node name="NitroCrate1" parent="Nitro4" index="0" instance=ExtResource( 10 )]
-position = Vector2( 186, 310 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate2" parent="Nitro4" index="1" instance=ExtResource( 10 )]
-position = Vector2( 166, 310 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate3" parent="Nitro4" index="2" instance=ExtResource( 10 )]
-position = Vector2( 146, 310 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate4" parent="Nitro4" index="3" instance=ExtResource( 10 )]
-position = Vector2( 126, 310 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate5" parent="Nitro4" index="4" instance=ExtResource( 10 )]
-position = Vector2( 106, 310 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate6" parent="Nitro4" index="5" instance=ExtResource( 10 )]
-position = Vector2( 186, 290 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate7" parent="Nitro4" index="6" instance=ExtResource( 10 )]
-position = Vector2( 166, 290 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate8" parent="Nitro4" index="7" instance=ExtResource( 10 )]
-position = Vector2( 146, 290 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate9" parent="Nitro4" index="8" instance=ExtResource( 10 )]
-position = Vector2( 126, 290 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate10" parent="Nitro4" index="9" instance=ExtResource( 10 )]
-position = Vector2( 106, 290 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate11" parent="Nitro4" index="10" instance=ExtResource( 10 )]
-position = Vector2( 186, 270 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate12" parent="Nitro4" index="11" instance=ExtResource( 10 )]
-position = Vector2( 166, 270 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate13" parent="Nitro4" index="12" instance=ExtResource( 10 )]
-position = Vector2( 146, 270 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate14" parent="Nitro4" index="13" instance=ExtResource( 10 )]
-position = Vector2( 126, 270 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate15" parent="Nitro4" index="14" instance=ExtResource( 10 )]
-position = Vector2( 106, 270 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate16" parent="Nitro4" index="15" instance=ExtResource( 10 )]
-position = Vector2( 186, 250 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate17" parent="Nitro4" index="16" instance=ExtResource( 10 )]
-position = Vector2( 166, 250 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate18" parent="Nitro4" index="17" instance=ExtResource( 10 )]
-position = Vector2( 146, 250 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate19" parent="Nitro4" index="18" instance=ExtResource( 10 )]
-position = Vector2( 126, 250 )
-can_be_toggled = false
-phased_in = false
-
-[node name="NitroCrate20" parent="Nitro4" index="19" instance=ExtResource( 10 )]
-position = Vector2( 106, 250 )
-can_be_toggled = false
-phased_in = false
-
-[node name="Player" parent="." index="12"]
-position = Vector2( 128, 160 )
-
-[node name="Chicken" parent="." index="13" instance=ExtResource( 5 )]
-position = Vector2( 98, 207.082 )
+tile_data = PoolIntArray( 720911, 8, 0, 720912, 6, 0, 720913, 6, 0, 720914, 6, 0, 720915, 6, 0, 720916, 6, 0, 720917, 6, 0, 720918, 9, 0, 786447, 4, 0, 786454, 3, 0, 851983, 4, 0, 851990, 3, 0, 917519, 4, 0, 917526, 3, 0, 983055, 4, 0, 983062, 3, 0, 1048591, 10, 0, 1048592, 1, 0, 1048593, 1, 0, 1048594, 1, 0, 1048595, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048598, 11, 0 )
+
+[node name="Controls" type="Node2D" parent="." index="1"]
+position = Vector2( 40, -1 )
+
+[node name="Divider" type="Label" parent="Controls" index="0"]
+margin_left = 227.633
+margin_top = 262.125
+margin_right = 299.633
+margin_bottom = 288.125
+custom_fonts/font = SubResource( 27 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Crunch"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." index="2"]
+position = Vector2( 277.06, 236.67 )
 
 [node name="RegularBackground" parent="Background" index="0"]
-margin_bottom = -291.0
+margin_bottom = -226.0
 
 [node name="RegularBackground3" parent="Background" index="1"]
-margin_top = 334.0
+margin_top = 270.0
 
-[node name="RegularBackground5" parent="Background" index="4" instance=ExtResource( 12 )]
-margin_left = 590.0
-margin_top = 271.0
+[node name="RegularBackground2" parent="Background" index="2"]
+margin_right = -479.0
 
-[node name="RegularBackground6" parent="Background" index="5" instance=ExtResource( 12 )]
-margin_left = 319.0
-margin_top = 114.0
-margin_right = -238.0
-margin_bottom = -229.0
+[node name="RegularBackground4" parent="Background" index="3"]
+margin_left = 365.0
 
-[node name="EndPoint" parent="." index="16"]
-position = Vector2( 81, 288 )
-
-[editable path="GoldBlock1/PhaseInHitbox"]
-[editable path="GoldBlock2/PhaseInHitbox"]
-[editable path="GoldBlock3/PhaseInHitbox"]
+[node name="Fruit" parent="." index="9" instance=ExtResource( 8 )]
+position = Vector2( 330.556, 243.276 )

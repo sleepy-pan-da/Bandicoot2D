@@ -46,6 +46,7 @@ pitch_scale = 4.0
 
 [node name="ReachedEndPoint" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource( 8 )
+volume_db = 4.0
 
 [node name="ChickenDie" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource( 9 )

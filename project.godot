@@ -63,7 +63,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Bandicoot2D"
-run/main_scene="res://Levels/SandBoxLevel.tscn"
+run/main_scene="res://Levels/Level1.tscn"
 config/icon="res://icon.png"
 
 [autoload]
