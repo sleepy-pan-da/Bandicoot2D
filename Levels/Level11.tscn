@@ -613,28 +613,28 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 24/z_index = 0
 
-[sub_resource type="AtlasTexture" id=37]
+[sub_resource type="AtlasTexture" id=27]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 19, 21 )
 
-[sub_resource type="AtlasTexture" id=38]
+[sub_resource type="AtlasTexture" id=28]
 atlas = ExtResource( 9 )
 region = Rect2( 19, 0, 19, 21 )
 
-[sub_resource type="SpriteFrames" id=39]
+[sub_resource type="SpriteFrames" id=29]
 animations = [ {
-"frames": [ SubResource( 37 ) ],
+"frames": [ SubResource( 27 ) ],
 "loop": false,
 "name": "Default",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 38 ) ],
+"frames": [ SubResource( 28 ) ],
 "loop": false,
 "name": "Pressed",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=27]
+[sub_resource type="RectangleShape2D" id=30]
 extents = Vector2( 39, 3 )
 
 [node name="Level11" instance=ExtResource( 1 )]
@@ -653,7 +653,7 @@ position = Vector2( -200, 48 )
 
 [node name="R" type="AnimatedSprite" parent="Controls1" index="0"]
 position = Vector2( 664, 256 )
-frames = SubResource( 39 )
+frames = SubResource( 29 )
 animation = "Default"
 script = ExtResource( 10 )
 
@@ -722,7 +722,7 @@ position = Vector2( 432, 254 )
 
 [node name="CollisionShape2D" parent="Platforms/Platform1/PhaseInHitbox" index="0"]
 position = Vector2( 24, 0 )
-shape = SubResource( 27 )
+shape = SubResource( 30 )
 
 [node name="Platform2" type="Node2D" parent="Platforms" index="1"]
 position = Vector2( 176, -158 )

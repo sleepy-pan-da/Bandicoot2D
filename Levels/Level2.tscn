@@ -19,85 +19,85 @@
 [ext_resource path="res://Assets/SimpleKeys/Jumbo/Dark/Spritesheets/W.png" type="Texture" id=17]
 [ext_resource path="res://Assets/SimpleKeys/Jumbo/Dark/Spritesheets/ARROWUP.png" type="Texture" id=18]
 
-[sub_resource type="AtlasTexture" id=35]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 9 )
 region = Rect2( 19, 0, 19, 21 )
 
-[sub_resource type="SpriteFrames" id=33]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
 "name": "Default",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 35 ) ],
+"frames": [ SubResource( 1 ) ],
 "loop": false,
 "name": "Pressed",
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=37]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 11 )
 region = Rect2( 0, 0, 19, 21 )
 
-[sub_resource type="AtlasTexture" id=38]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 10 )
 region = Rect2( 19, 0, 19, 21 )
 
-[sub_resource type="SpriteFrames" id=36]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ SubResource( 37 ) ],
+"frames": [ SubResource( 3 ) ],
 "loop": false,
 "name": "Default",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 38 ) ],
+"frames": [ SubResource( 4 ) ],
 "loop": false,
 "name": "Pressed",
 "speed": 5.0
 } ]
 
-[sub_resource type="DynamicFont" id=32]
+[sub_resource type="DynamicFont" id=6]
 size = 32
 font_data = ExtResource( 14 )
 
-[sub_resource type="AtlasTexture" id=41]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 17 )
 region = Rect2( 0, 0, 19, 21 )
 
-[sub_resource type="AtlasTexture" id=42]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 17 )
 region = Rect2( 19, 0, 19, 21 )
 
-[sub_resource type="SpriteFrames" id=39]
+[sub_resource type="SpriteFrames" id=9]
 animations = [ {
-"frames": [ SubResource( 41 ) ],
+"frames": [ SubResource( 7 ) ],
 "loop": false,
 "name": "Default",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 42 ) ],
+"frames": [ SubResource( 8 ) ],
 "loop": false,
 "name": "Pressed",
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=43]
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 18 )
 region = Rect2( 0, 0, 19, 21 )
 
-[sub_resource type="AtlasTexture" id=44]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 18 )
 region = Rect2( 19, 0, 19, 21 )
 
-[sub_resource type="SpriteFrames" id=40]
+[sub_resource type="SpriteFrames" id=12]
 animations = [ {
-"frames": [ SubResource( 43 ) ],
+"frames": [ SubResource( 10 ) ],
 "loop": false,
 "name": "Default",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 44 ) ],
+"frames": [ SubResource( 11 ) ],
 "loop": false,
 "name": "Pressed",
 "speed": 5.0
@@ -129,13 +129,13 @@ tile_data = PoolIntArray( 983056, 0, 0, 983057, 1, 0, 983058, 2, 0, 1048592, 3, 
 
 [node name="A" type="AnimatedSprite" parent="Controls1" index="0"]
 position = Vector2( 477.5, 121 )
-frames = SubResource( 33 )
+frames = SubResource( 2 )
 animation = "Default"
 script = ExtResource( 12 )
 
 [node name="LeftArrow" type="AnimatedSprite" parent="Controls1" index="1"]
 position = Vector2( 544.5, 121 )
-frames = SubResource( 36 )
+frames = SubResource( 5 )
 animation = "Default"
 script = ExtResource( 13 )
 
@@ -144,7 +144,7 @@ margin_left = 500.5
 margin_top = 106.0
 margin_right = 524.5
 margin_bottom = 132.0
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "or"
 align = 1
@@ -158,13 +158,13 @@ position = Vector2( 0, 28 )
 
 [node name="W" type="AnimatedSprite" parent="Controls2" index="0"]
 position = Vector2( 477.5, 121 )
-frames = SubResource( 39 )
+frames = SubResource( 9 )
 animation = "Default"
 script = ExtResource( 15 )
 
 [node name="UpArrow" type="AnimatedSprite" parent="Controls2" index="1"]
 position = Vector2( 544.5, 121 )
-frames = SubResource( 40 )
+frames = SubResource( 12 )
 animation = "Default"
 script = ExtResource( 16 )
 
@@ -173,7 +173,7 @@ margin_left = 500.5
 margin_top = 106.0
 margin_right = 524.5
 margin_bottom = 132.0
-custom_fonts/font = SubResource( 32 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "or"
 align = 1

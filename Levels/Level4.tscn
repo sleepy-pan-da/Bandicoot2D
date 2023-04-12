@@ -612,18 +612,22 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 fruits_left = 1
 next_level = ExtResource( 5 )
 
+[node name="Terrain" parent="." index="0"]
+position = Vector2( 36, 0 )
+
 [node name="GrassTerrainTileMap" parent="Terrain" index="0" instance=ExtResource( 3 )]
 tile_set = SubResource( 26 )
 tile_data = PoolIntArray( 524299, 8, 0, 524300, 6, 0, 524301, 6, 0, 524302, 6, 0, 524303, 6, 0, 524304, 6, 0, 524305, 6, 0, 524306, 6, 0, 524307, 6, 0, 524308, 6, 0, 524309, 6, 0, 524310, 6, 0, 524311, 6, 0, 524312, 6, 0, 524313, 6, 0, 524314, 6, 0, 524315, 6, 0, 524316, 9, 0, 589835, 4, 0, 589852, 3, 0, 655371, 4, 0, 655388, 3, 0, 720907, 4, 0, 720924, 3, 0, 786443, 4, 0, 786460, 3, 0, 851979, 4, 0, 851996, 3, 0, 917515, 4, 0, 917532, 3, 0, 983051, 4, 0, 983068, 3, 0, 1048587, 10, 0, 1048588, 1, 0, 1048589, 1, 0, 1048590, 1, 0, 1048591, 1, 0, 1048592, 1, 0, 1048593, 1, 0, 1048594, 1, 0, 1048595, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048598, 1, 0, 1048599, 1, 0, 1048600, 1, 0, 1048601, 1, 0, 1048602, 1, 0, 1048603, 1, 0, 1048604, 11, 0 )
 
 [node name="Crate" type="Node2D" parent="." index="1"]
+position = Vector2( 36, 0 )
 
 [node name="BasicCrate" parent="Crate" index="0" instance=ExtResource( 1 )]
 position = Vector2( 400, 246 )
 can_be_toggled = false
 
 [node name="Player" parent="." index="2"]
-position = Vector2( 217.228, 231.98 )
+position = Vector2( 253.228, 231.98 )
 
 [node name="RegularBackground" parent="Background" index="0"]
 margin_bottom = -276.0
@@ -632,10 +636,10 @@ margin_bottom = -276.0
 margin_top = 271.0
 
 [node name="RegularBackground2" parent="Background" index="2"]
-margin_right = -543.0
+margin_right = -508.0
 
 [node name="RegularBackground4" parent="Background" index="3"]
-margin_left = 464.0
+margin_left = 498.0
 
 [node name="EndPoint" parent="." index="5"]
-position = Vector2( 326.373, 223.571 )
+position = Vector2( 362.373, 223.571 )

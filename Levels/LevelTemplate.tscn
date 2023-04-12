@@ -28,7 +28,6 @@ layer = -2
 [node name="RegularBackground" parent="Background" instance=ExtResource( 2 )]
 margin_left = 0.0
 margin_bottom = -357.0
-color = Color( 0.129412, 0.121569, 0.188235, 1 )
 
 [node name="RegularBackground3" parent="Background" instance=ExtResource( 2 )]
 margin_left = 0.0
@@ -68,7 +67,7 @@ margin_top = -38.0
 margin_right = 76.0
 margin_bottom = -12.0
 custom_fonts/font = SubResource( 1 )
-text = "15/15"
+text = "15/18"
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false

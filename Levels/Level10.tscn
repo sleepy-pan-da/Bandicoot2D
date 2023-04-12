@@ -624,11 +624,15 @@ extents = Vector2( 16, 16 )
 fruits_left = 10
 next_level = ExtResource( 11 )
 
+[node name="Terrain" parent="." index="0"]
+position = Vector2( 0, 40 )
+
 [node name="GrassTerrainTileMap" parent="Terrain" index="0" instance=ExtResource( 2 )]
 tile_set = SubResource( 26 )
 tile_data = PoolIntArray( 196625, 8, 0, 196626, 6, 0, 196627, 6, 0, 196628, 6, 0, 196629, 6, 0, 196630, 6, 0, 196631, 6, 0, 196632, 6, 0, 196633, 6, 0, 196634, 6, 0, 196635, 6, 0, 196636, 9, 0, 262161, 4, 0, 262172, 3, 0, 327697, 4, 0, 327708, 3, 0, 393233, 4, 0, 393244, 3, 0, 458769, 4, 0, 458780, 3, 0, 524305, 4, 0, 524316, 3, 0, 589841, 4, 0, 589852, 3, 0, 655377, 4, 0, 655388, 3, 0, 720913, 4, 0, 720924, 3, 0, 786449, 4, 0, 786460, 3, 0, 851985, 4, 0, 851996, 3, 0, 917521, 4, 0, 917526, 12, 0, 917527, 14, 0, 917532, 3, 0, 983057, 4, 0, 983062, 15, 0, 983063, 17, 0, 983068, 3, 0, 1048593, 10, 0, 1048594, 1, 0, 1048595, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048598, 1, 0, 1048599, 1, 0, 1048600, 1, 0, 1048601, 1, 0, 1048602, 1, 0, 1048603, 1, 0, 1048604, 11, 0 )
 
 [node name="LeftTerrain" type="Node2D" parent="." index="1"]
+position = Vector2( 0, 40 )
 script = ExtResource( 5 )
 path_to_tilemap = NodePath("PinkGrassTerrainTileMap")
 
@@ -642,6 +646,7 @@ position = Vector2( 304, 241 )
 shape = SubResource( 27 )
 
 [node name="BasicCratesLeft" type="Node2D" parent="." index="2"]
+position = Vector2( 0, 40 )
 
 [node name="BasicCrate" parent="BasicCratesLeft" index="0" instance=ExtResource( 7 )]
 position = Vector2( 304, 214 )
@@ -660,12 +665,14 @@ position = Vector2( 304, 74 )
 phased_in = false
 
 [node name="LeftNitro" type="Node2D" parent="." index="3"]
+position = Vector2( 0, 40 )
 
 [node name="NitroCrate" parent="LeftNitro" index="0" instance=ExtResource( 9 )]
 position = Vector2( 304, 246 )
 phased_in = false
 
 [node name="RightTerrain" type="Node2D" parent="." index="4"]
+position = Vector2( 0, 40 )
 script = ExtResource( 5 )
 path_to_tilemap = NodePath("BrownGrassTerrainTileMap")
 
@@ -679,7 +686,7 @@ position = Vector2( 432, 240 )
 shape = SubResource( 28 )
 
 [node name="BasicCratesRight" type="Node2D" parent="." index="5"]
-position = Vector2( 128, 0 )
+position = Vector2( 128, 40 )
 
 [node name="BasicCrate" parent="BasicCratesRight" index="0" instance=ExtResource( 7 )]
 position = Vector2( 304, 214 )
@@ -706,13 +713,14 @@ position = Vector2( 272, 174 )
 phased_in = false
 
 [node name="RightNitro" type="Node2D" parent="." index="6"]
-position = Vector2( 128, 0 )
+position = Vector2( 128, 40 )
 
 [node name="NitroCrate" parent="RightNitro" index="0" instance=ExtResource( 9 )]
 position = Vector2( 304, 246 )
 phased_in = false
 
 [node name="Spikes" type="Node2D" parent="." index="7"]
+position = Vector2( 0, 40 )
 
 [node name="Spikes" parent="Spikes" index="0" instance=ExtResource( 10 )]
 position = Vector2( 328, 248 )
@@ -731,10 +739,13 @@ position = Vector2( 408, 248 )
 can_be_toggled = false
 
 [node name="Player" parent="." index="8"]
-position = Vector2( 368.535, 175.804 )
+position = Vector2( 368.535, 215.804 )
+
+[node name="RegularBackground" parent="Background" index="0"]
+margin_bottom = -315.0
 
 [node name="RegularBackground3" parent="Background" index="1"]
-margin_top = 270.0
+margin_top = 311.0
 
 [node name="RegularBackground2" parent="Background" index="2"]
 margin_right = -447.0
@@ -743,7 +754,7 @@ margin_right = -447.0
 margin_left = 462.0
 
 [node name="EndPoint" parent="." index="11"]
-position = Vector2( 377, 191.804 )
+position = Vector2( 377, 231.804 )
 
 [editable path="LeftTerrain/PhaseInHitbox"]
 [editable path="RightTerrain/PhaseInHitbox"]
